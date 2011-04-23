@@ -1,0 +1,125 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3935,        116]
+NotebookOptionsPosition[      3541,         99]
+NotebookOutlinePosition[      3966,        116]
+CellTagsIndexPosition[      3923,        113]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.51255300662468*^9, 3.512553014723694*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.512553024741617*^9, 3.512553027767467*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<PlotLegends`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"figure", "=", 
+   RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"V", ",", 
+       RowBox[{"(", 
+        RowBox[{"V", "+", 
+         RowBox[{"RandomReal", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "0.05"}], ",", "0.05"}], "}"}], "]"}]}], ")"}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"V", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotPoints", "\[Rule]", "5"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "Red", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Green", ",", "Thin"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", 
+      RowBox[{"{", "10", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MeshStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{
+        RowBox[{"PointSize", "[", "Small", "]"}], ",", "Blue"}], "]"}]}], ",",
+      "\[IndentingNewLine]", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"V", ",", "I"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotLegend", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<modello\>\"", ",", " ", "\"\<reale\>\""}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"LegendSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.35", ",", "0.15"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"LegendPosition", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.5", ",", 
+        RowBox[{"-", "0.4"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"LegendShadow", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}]}], "\n", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+    "\"\</home/federico/workspace/books/imadls/mathematica/resistenza.eps\>\"\
+", ",", "figure", ",", "\"\<EPS\>\""}], "]"}], ";"}], 
+  "\n"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwdzk0ogwEAxvGF7TBfM1myolGiMcu72qSWrxVNNLEDZtimtQPlsKXko0xb
+lsRq0uyVmowp7LZSdlOWC9LroKUl0zBiHDbZ8x6efofn8heMT/UZshgMBj8z
+6DSmfn3Cl9bt7yfmQcYtC8GFe+UnPHh1rqiFoqBKCEc+vggYKemUQJtHJ4eC
+nACtPXTXBifDRiVc06p74U9ygvbC2qSFeiowCm95M3rIEtVPw0uBxgzDLnIR
+ShMNK1Cm29yAUarFTffFvSRcSNX5YFocCcJqx9Ej7JCSMSheakzAZEH/H6wc
+ILMPM9YoCRb0MtVsGH1Yz4fXx/tF0DQ0y4XPqrMKyGFbq2D4NU9M/xKTDL5/
+GuSwx/VGKzMXt8PBZa0C3u/cdMF4s7Mb2lYpNdwtdIzB3FJqHvrtHCvkWQJu
+GCsL+eFcevgUekz8IPwHaCjU6A==
+  "]]
+},
+WindowToolbars->{"RulerBar", "EditBar"},
+WindowSize->{825, 867},
+WindowMargins->{{Automatic, 266}, {73, Automatic}},
+TaggingRules->{"GraphicsSelectionType" -> {}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 91, 1, 30, "Input"],
+Cell[651, 23, 92, 1, 30, "Input"],
+Cell[746, 26, 2791, 71, 354, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

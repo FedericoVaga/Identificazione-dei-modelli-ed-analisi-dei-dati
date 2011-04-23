@@ -1,0 +1,140 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4554,        131]
+NotebookOptionsPosition[      4209,        114]
+NotebookOutlinePosition[      4546,        129]
+CellTagsIndexPosition[      4503,        126]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.512560315587159*^9, 3.512560326845558*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<PlotLegends`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ct", "=", 
+   RowBox[{
+    RowBox[{"0.5", "*", "x"}], "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"list", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{"Ct", ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"figure", "=", 
+   RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Ct", ",", 
+       RowBox[{"Ct", "+", "2"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotPoints", "\[Rule]", "2"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "Red", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Green", ",", "Thin"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", 
+      RowBox[{"{", "2", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MeshShading", "\[Rule]", "none"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MeshStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{
+        RowBox[{"PointSize", "[", "Small", "]"}], ",", "Blue"}], "]"}]}], ",",
+      "\[IndentingNewLine]", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotLegend", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<N=q\>\"", ",", " ", "\"\<N>q\>\""}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"LegendSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.35", ",", "0.15"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"LegendPosition", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.5", ",", 
+        RowBox[{"-", "0.4"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"LegendShadow", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}]}], "\n", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\</home/federico/workspace/books/imadls/mathematica/casiinterpolazione.\
+eps\>\"", ",", "list", ",", "\"\<EPS\>\""}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.512559512730316*^9, 3.512559582313057*^9}, {
+  3.512559945379593*^9, 3.512559951984558*^9}, {3.512560783188891*^9, 
+  3.512561043132365*^9}, {3.5125610956159773`*^9, 3.5125612064528646`*^9}, {
+  3.512561398458815*^9, 3.512561434158863*^9}, {3.512561477911717*^9, 
+  3.512561495148678*^9}, {3.512561578860818*^9, 3.512561592755701*^9}, {
+  3.5125617179102592`*^9, 3.512561748784731*^9}, {3.512561916884247*^9, 
+  3.5125619674552193`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MeshShading", "::", "colshd"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Invalid style tensor found \[NoBreak]\\!\\(none\\)\
+\[NoBreak]. The rank must be equal to the number of mesh functions. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/MeshShading\\\", ButtonNote -> \
+\\\"MeshShading::colshd\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.512561944082815*^9, 3.5125619696466513`*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 662},
+WindowMargins->{{Automatic, 355}, {Automatic, 24}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 92, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[674, 25, 2988, 74, 411, "Input"],
+Cell[3665, 101, 528, 10, 43, "Message"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

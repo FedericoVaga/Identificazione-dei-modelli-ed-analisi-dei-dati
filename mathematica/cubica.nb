@@ -1,0 +1,124 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3921,        115]
+NotebookOptionsPosition[      3685,        102]
+NotebookOutlinePosition[      4022,        117]
+CellTagsIndexPosition[      3979,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<PlotLegends`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ct", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"5", "+", 
+      RowBox[{"2", "*", "x"}], "+", 
+      RowBox[{"0.8", "*", 
+       RowBox[{"x", "^", "2"}]}], "+", 
+      RowBox[{"0.01", "*", 
+       RowBox[{"x", "^", "3"}]}]}], ")"}], "/", "1000"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"figure", "=", 
+   RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Ct", ",", 
+       RowBox[{"(", 
+        RowBox[{"Ct", "+", 
+         RowBox[{"RandomReal", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "4"}], ",", "4"}], "}"}], "]"}]}], ")"}]}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "100"}], ",", "100"}], "}"}], ",", "\[IndentingNewLine]", 
+     
+     RowBox[{"PlotPoints", "\[Rule]", "2"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "Red", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Green", ",", "Thin"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", 
+      RowBox[{"{", "20", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MeshStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{
+        RowBox[{"PointSize", "[", "Small", "]"}], ",", "Blue"}], "]"}]}], ",",
+      "\[IndentingNewLine]", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotLegend", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<modello\>\"", ",", " ", "\"\<processo\>\""}], "}"}]}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"LegendSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.35", ",", "0.15"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"LegendPosition", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0.5", ",", 
+        RowBox[{"-", "0.4"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"LegendShadow", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}]}], "\n", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\</home/federico/workspace/books/imadls/mathematica/cubica.eps\>\"", 
+    ",", "figure", ",", "\"\<EPS\>\""}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.512557727704235*^9, 3.512557783677199*^9}, {
+   3.512557838733046*^9, 3.5125578508336163`*^9}, {3.5125580002713327`*^9, 
+   3.512558184353734*^9}, 3.512558250583349*^9, {3.512558407222164*^9, 
+   3.512558614728397*^9}, {3.512558890355463*^9, 3.5125589006237392`*^9}, {
+   3.512558955830411*^9, 3.512559050979109*^9}, {3.512559195660651*^9, 
+   3.512559195746037*^9}, {3.512560557145775*^9, 3.5125605649348917`*^9}, {
+   3.512560609328493*^9, 3.512560629980856*^9}, {3.512560683891431*^9, 
+   3.512560720588052*^9}}]
+},
+WindowSize->{740, 480},
+WindowMargins->{{104, Automatic}, {52, Automatic}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 3124, 80, 335, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

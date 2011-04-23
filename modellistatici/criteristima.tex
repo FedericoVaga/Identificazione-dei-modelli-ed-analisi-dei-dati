@@ -4,9 +4,16 @@
 \index{Stima ai minimi quadrati (LS)}
 Innanzi tutto, un'importante premessa è che il numero delle osservazioni $N$ sia almeno pari al numero dei parametri $q$ da stimare, quindi deve valere $N\geq q$. Nel caso in cui $N>q$, allora non sarà possibile trovare un modello che spieghi esattamente i dati per via degli errori di misura, inoltre, la realtà non è mai perfettamente modellabile. Per chiarire questo concetto di seguito vengono presentati due grafici che rappresentano i due casi $N=q$ e $N>q$:
 % GRAFICI DEI DUE CASI
-\begin{center}
-[FIXME: grafici dei due casi]
-\end{center}
+\textbf{GRAFICO DA FARE, NON VIENE BELLO}
+\begin{figure}[htbp]
+  \centering
+  %\subfigure[Il rango non è massimo, ci sono infiniti punti di minimo\label{fig:grafo3Dnomin}]{\includegraphics[keepaspectratio]{mathematica/intercaso1}}
+  
+  %\subfigure[Il rango è massimo e il punto di minimo è unico\label{fig:grafo3Dmin}]{\includegraphics[keepaspectratio]{mathematica/intercaso2}}
+  
+  \caption{Confronto fra modelli che hanno tanti parametri quanti i dati, e modelli che hanno un numero di dati maggiore al numero di parametri.\label{fig:confrontomodellidatiparametri}}
+\end{figure}
+
 Come si può vedere, nel caso $N>q$ abbiamo dovuto usare una retta di regressione che minimizzasse gli errori, ma non ci è possibile creare una retta che passi per tutti i punti. Dato che il caso $N>q$ è la norma, e quindi non ci è possibile creare modelli esatti, ci "accontentiamo" che i residui\index{Residuo} \footnote{il residuo è l'errore commesso dal modello rispetto ad un particolare dato} siano piccoli $\varepsilon$ sia piccolo:
 
   \[ \varepsilon :=Y-\Phi(u)\cdot \theta \]
@@ -20,7 +27,7 @@ D'ora in avanti, per brevità, $\Phi\equiv \Phi(u)$. Il nostro interesse ora è 
   \[ \theta=(\Phi^T\Phi)^{-1}\cdot \Phi^TY \]
 Prima di procedere alla dimostrazione di questo teorema, si veda l'appendice \ref{app:operatorimatriciali}
 
-\begin{center} \rule{300pt}{1pt} \end{center}
+
 \begin{dimostrazione}
 
   \[ rank[\Phi]=q \Longrightarrow det(\Phi^T\Phi) \ne 0 \]
@@ -65,7 +72,7 @@ Essendo il risultato una diade:
   
 Come volevasi dimostrare, è un punto di minimo
 \end{dimostrazione}
-\begin{center} \rule{300pt}{1pt} \end{center}
+
 Possiamo quindi concludere che la stima LS è definita come:
 
   \[ \theta^{LS}=\arg \min_{\theta} J(\theta) \]
@@ -141,7 +148,7 @@ Sotto l'ipotesi appena enunciata, con $rank[\Phi]=q$, se, inoltre, gli errori ha
     Var[\theta^{ML}]&=(\Phi^T\Sigma_V^{-1}\Phi)^{-1}
   \end{align*}
   
-\begin{center} \rule{300pt}{1pt} \end{center}
+
 \begin{dimostrazione} %###########
 Dimostriamo la non polarizzazione dello stimatore:
 
@@ -169,7 +176,6 @@ dato che $\Phi\theta$ non è una V.C., non concorre a determinare la varianza, q
   \end{split} 
   \]
 \end{dimostrazione}
-\begin{center} \rule{300pt}{1pt} \end{center}
 
 Se, invece, sempre sotto l'ipotesi enunciata con $rank[\Phi]=q$, non avessimo la stessa varianza sugli errori, ma avessimo $\Sigma_V=\sigma^2\psi$, con $\sigma^2$ scalare incognito e $\psi$ matrice nota, allora:
 

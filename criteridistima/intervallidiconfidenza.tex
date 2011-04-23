@@ -11,13 +11,12 @@ Fare delle stime senza dare alcuna indicazione sulla loro precisione può essere
 Come si vede dai grafici in figura \ref{fig:grafIntConf}, nel primo caso abbiamo una stima che potrebbe cadere in un intervallo molto ampio, quindi è meno affidabile della stima del secondo caso, dove l'intervallo è più stretto.\newline
 Data una stima è desiderabile che questa cada all'interno di un intervallo piccolo. Con il valore $\gamma$ indichiamo il livello di confidenza della stima, ovvero la probabilità che la stima cada in un certo intervallo.
 
-\begin{center} \rule{300pt}{1pt} \end{center}
+
 \begin{esempio} % ###########
 Avendo a disposizione la stima a posteriori con ddp unimodale e simmentrica, con $\gamma=0.9$ abbiamo il 90\% di probabilità di cadere dell'intervallo $I_{0.9}=[\theta^B-\sigma \cdot 0.9 ; \theta^B + \sigma \cdot 0.9]$ \newline
 [grafico]\newline
 L'intervallo che abbiamo definito è detto intervallo di confidenza al 90\%
 \end{esempio}
-\begin{center} \rule{300pt}{1pt} \end{center}
 
 Sia dato uno stimatore $\hat{\theta}$ gaussiano non polarizzato avente varianza nota; risolviamo ora il problema di trovare il suo intervallo di confidenza $I_\gamma$ dato $\gamma$. Per risolvere il problema è utile standardizzare con una gaussiana standard e quindi calcolare:
 
@@ -39,7 +38,7 @@ Ora, utilizzando le tabelle della gaussiana standard, troviamo:
 Quello che abbiamo appena trovato è l'intervallo di confidenza, ovvero l'intervallo dove cade il $\gamma\%$ di probabilità; per trovarlo siamo partiti cercando un valore $z_0$ tale che la probabilità che i valori fossero compresi fra $\pm z_0$ fosse pari a $\gamma$.\newline
 Secondo la scuola Bayesiana questo è un imbroglio perché $\theta$ non è una V.C. ma un numero ben definito che andiamo a calcolare in modo puntuale. L'imbroglio sta nel dire che $\theta \in I_\gamma$ perché una volta raccolti i dati $\hat{\theta}$ è un numero puro e non ha quindi alcuna variabilità, caratteristica tipica delle V.C. . In difesa del metodo vi è l'osservazione che ripetendo l'esperimento, e quindi ottenendo nuovi dati, $\hat{\theta}$ potrebbe cambiare e quindi è trattabile come una V.C.
 
-\begin{center} \rule{300pt}{1pt} \end{center}
+
 \begin{esempio} % ###########
 Siano date $N$ $X_i$ V.C. iid con $Var[X_i]=\sigma^2$, $\sigma^2$ nota ed $N$ grande. Trovare l'intervallo di confidenza $I_\gamma$ per $M_1$.\newline
 Il parametro che dobbiamo cercare è $\theta=m$. Conosciamo già una stimatre della media, ovvero la media campionaria, quindi:
@@ -82,7 +81,7 @@ Da notare che la precisione è molto costosa, infatti, se volessimo un $\delta$ 
 
 \[ \lim_{\delta \rightarrow 0} {N}=\infty \]
 \end{esempio}
-\begin{center} \rule{300pt}{1pt} \end{center}
+
 
 Quello che abbiamo fatto fin ore è far riferimento ad una standardizzazione con una gaussiana; un'alternativa, utile per piccoli campioni, è la $t$ di Student, definita come:
 \[ T_N:=\frac{Z}{\sqrt{\sum_{i=1}^{N}Z_i^2}} \cdot \sqrt{N}=\frac{Z}{\chi_N} \cdot \sqrt{N} \]
@@ -99,10 +98,3 @@ L'andamento è simile ad una gaussiana, ma con una varianza maggiore. Per la $t$
     Var[T_N]=\frac{N}{N-2}\\
     \lim_{N\rightarrow \infty} T_N = G(0,1)
   \end{gather*}
-  
-\begin{center} \rule{300pt}{1pt} \end{center}
-
-\subsubsection{Esempio} % ###########
-%FIXME
-[FIXME: esempio da scrivere ancora]
-\begin{center} \rule{300pt}{1pt} \end{center}

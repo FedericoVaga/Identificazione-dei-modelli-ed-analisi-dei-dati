@@ -1,24 +1,39 @@
 \section{Introduzione}
 Con l'identificazione dei modelli vogliamo trovare un modello matematico (una funzione) che leghi, nel miglior modo possibile, un'insieme di dati riguardanti variabili indipendenti con un'insieme di dati dipendenti.
 
-%FIXME
-\begin{center}
-\textbf{[diagramma del modello]}
-\end{center}
+\begin{figure}[htbp]
+  \centering
+  \[
+    \begin{CD}
+       @>u>> \framebox{$Y=\Phi(u,\theta)$} @>Y>>
+    \end{CD}
+  \]
+  \caption{Diagramma di un modello statico\label{fig:diagrammamodstat}}
+\end{figure}
 
-\begin{center}
-\textbf{[Spiegazione degli elementi del modello]}
-\end{center}
+\begin{itemize}
+    \item $Y$ è l'insieme delle variabili dipendenti, ovvero i dati misurati sull'esperimento che vogliamo spiegare con un modello
+    \item $u$ è l'insieme delle variabili indipendenti, ovvero dati misurati, o noti a priori, mediante i quali voglio spiegare gli effetti
+    \item $\Phi( , )$ è il modello matematico che lega $u$ ad $Y$
+    \item $\theta$ parametri incogniti del modello
+\end{itemize}
 
 \begin{esempio} % ###########
 Per chiarire il concetto di identificazione del modello, prendiamo, ad esempio, una resistenza di cui conosciamo differenza di potenziale $V$ e corrente $I$ e vogliamo trovare il modello che permette di determinare la corrente in funzione della differenza di potenziale.
-  \begin{center}
-  \textbf{[disegno della resistenza]}
-  \end{center}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[ scale=0.5]{img/resistenza}
+  \caption{Schema circuitale di una resistenza\label{fig:resistenza}}
+\end{figure}
+
 Dopo alcune misure sperimentali otteniamo:
-  \begin{center}
-  \textbf{[grafico con andamento lineare nel piano VI]}
-  \end{center}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[ keepaspectratio]{mathematica/resistenza}
+  \caption{In figura è rappresentato l'andamento del modello, confrontato con l'andamento reale del sistema. Presi alcuni campioni si nota l'esistenza di un errore $\varepsilon$ nel modello rispetto alla realtà\label{fig:modelloresistenza}}
+\end{figure}
+
 La retta rappresentata nel grafico nella realtà non si verifica mai per via di errori di misura, inoltre, la relazione perfettamente lineare sussiste solo nel caso di una resistenza ideale.
 Nel caso di questo esempio la variabile dipendente è la corrente, quindi $Y=I$, mentre la variabile indipendente è la differenza di potenziale, quindi $u=V$; ne consegue che il modello che vogliamo trovare sarà:
 
@@ -44,8 +59,8 @@ Sappiamo che il grafico di $C(t)$ ha un andamento esponenziale inverso, sappiamo
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[scale=0.5]{img/cdt.png}
-  \caption{Andamento della concentrazione di un farmaco\label{fig:concfarmaco}}
+  \includegraphics[keepaspectratio]{mathematica/andamentofarmaco}
+  \caption{Andamento della concentrazione di un farmaco nel sangue. Anche qua vediamo che il modello presenta degli errori rispetto all'andamento reale\label{fig:concfarmaco}}
 \end{figure}
 
 In questo caso il modello viene rappresentato in questo modo:
@@ -67,8 +82,8 @@ Prendiamo ora come esempio un campione di dati e cerchiamo di approssimare\footn
 
   \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.5]{img/cubica.png}
-    \caption{Funzione cubica per l'interpolazione dei campioni\label{fig:andamentocubido}}
+    \includegraphics[keepaspectratio]{mathematica/cubica}
+    \caption{Funzione cubica per l'interpolazione dei campioni di un processo\label{fig:andamentocubido}}
   \end{figure}
 
   \[ y=a_0 + a_1x+a_2x^2+a_3x^3 \]

@@ -27,7 +27,6 @@ Il nuovo elemento introdotto $\Sigma_1$ è la sorgente casuale caratterizzata da
   
 Vediamo ora alcuni esempi per meglio chiarire la stima a posteriori.
 
-\begin{center} \rule{300pt}{1pt} \end{center}
 \begin{esempio}
 Sia data una scatola di monete: il 40\% sono oneste, il rimanente 60\% sono truccate. Per le monete truccate la probabilità che esca testa è dell'80\% $P(T)=0.8$ . Estraendo una moneta a caso: qual'è la probabilità che sia truccata? Se dopo averla lanciata esce croce: qual'è la probabilità, a posteriori, che sia una moneta truccata?\newline
 La conoscenza a priori di questo esperimento è dato dalla conoscenza della quantità di monete truccate presenti:
@@ -67,7 +66,6 @@ Iterando il processo, ed aggiornando la ddp, un numero di volte sufficiente si t
 %FIXME grafici delle iterazioni
 \textbf{[grafici di iterazione]}
 \end{esempio}
-\begin{center} \rule{300pt}{1pt} \end{center}
 
 Giunti a questo punto ci si pone un problema: conoscendo $f_{\theta|X}(\theta|X)$ come scelgo il valore dello stimatore $\hat{\theta}$? Come abbiamo visto per la stima ML, si sceglieva il valore che massimizzava la ddp congiunta; ma in questo caso qual'è il valore "migliore" da scegliere? Potremmo scegliere la media, la moda o anche la mediana. Quello che occorre è un metodo per scegliere correttamente il valore.\newline
 Una buona idea potrebbe essere quella di valutare l'errore quadratico e quindi scegliere il valore che lo minimizza.
