@@ -1,0 +1,31 @@
+\section{Stima della l'autocoovarianza}
+\index{Stima dell'autocovarianza}
+Supponendo che $x(t)$ sia un PC stazionario ergodico, che abbia valore atteso nullo $E[x(t)]=0$ e che siano disponibili i dati $x(t) \quad t=0,...,N-1$, un possibile stimatore dell'autocoovarianza\index{Autocovarianza} è dato da:
+
+  \[ c_{xx}^{'}(\tau)=\frac{1}{N-|\tau |}\sum_{i=0}^{N-|\tau |-1}{x(i)x(i+\tau )} \quad, |\tau |<N \]
+  
+\noindent dove con $\tau$ indichiamo lo spostamento rispetto al valore di riferimento.
+\paragraph{Osservazione 1} Lo stimatore non è polarizzato, infatti $E[c_{xx}^{'}]=\gamma_{xx}(\tau)$
+
+%FIXME
+\begin{center}[FIXME DIMOSTRAZIONCINA CHE NON CAPISCO]\end{center}
+
+\paragraph{Osservazione 2} Lo stimatore è consistente. Per $\tau$ fissato $\lim_{N\rightarrow\infty}{Var[c_{xx}^{'}(\tau )]}=0$, ovvero, al crescere dei dati tende ad una delta di Dirac.
+%FIXME fare il grafico
+\newline[GRAFICO TENDENZA]
+\paragraph{Osservazione 3} Per $N$ fissato si vede che per $\tau\cong N$ la varianza $Var[c_{xx}^{'}]$ diventa grande, questo perché nel processo di stima vengono inseriti pochi termini $N-|\tau|-1$; se la varianza è grande siamo tentati a scartare il risultato.\newline\newline
+Uno stimatore alternativo per la l'autocovarianza è il seguente:
+
+  \[ c_{xx}^{'}(\tau)=\frac{1}{N}\sum_{i=0}^{N-|\tau |-1}{x(i)x(i+\tau )} \quad, |\tau |<N \]
+  
+\paragraph{Osservazione 1} Lo stimatore è polarizzato, ma è asintotticamente non polarizzato:
+
+  \[ c_{xx}(\tau)=\frac{N-|\tau |}{N}c_{xx}^{'} \Longrightarrow E[c_{xx}(\tau )]=\frac{N-|\tau |}{N}\gamma_{xx}(\tau )\]
+  
+\paragraph{Osservazione 2} Lo stimatore è consistente. Per $\tau$ fissato $\lim_{N\rightarrow\infty}{Var[c_{xx}^{'}(\tau )]}=0$, ovvero, al crescere dei dati tende ad una delta di Dirac.
+\paragraph{Osservazione 3} Per $N$ fissato e $\tau\cong N$, si ha che il valore atteso della stima $E[c_{xx}(\tau )]$ diminuisce al crescere di $\tau$, questo significa che peggiora la polarizzazione vicino ai bordi.\newline\newline
+Per questi stimatori è possibile definire degli intervalli di confidenza ma sono troppo complicati da calcolare e sono strettamente dipendenti dal processo che si sta studiando.\newline
+
+%FIXME
+\begin{center}[FIXME, PERCHÉ? Chi è il soggetto? Copiato pari pari dagli appunti]\end{center}
+\textit{In conclusione è meglio propendere per lo zero piuttosto che fornire numeri di cui non si conosce esattamente la natura. Inoltre, la maggior parte dei processi casuali stazionari è tale che $\lim_{|\tau|\rightarrow\infty}{\gamma_{xx}(\tau)}=0$. Per prudenza consideriamo $c_{xx}(\tau)$ sono per $|\tau|\leq \frac{N}{4}$}

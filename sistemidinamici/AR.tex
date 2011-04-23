@@ -1,0 +1,140 @@
+\section{Processi Auto Regressive - AR}
+
+\begin{figure}[htbp]\Large
+  \centering
+  \[
+    \begin{CD}
+      \begin{CD}
+        y(t-1) @>>>\\
+        y(t-2) @>>>\\
+          ...  @>>>\\
+        y(t-n) @>>>\\
+        w(t)   @>>>
+      \end{CD}
+      \framebox{$G(z)$} @>>> y(t)
+    \end{CD}
+  \]
+  \caption{Sistema dinamico Auto Regressive \label{fig:ar}}
+\end{figure}
+
+I processi Auto Regressive\index{Auto Regressive (AR)} $AR(n)$ eseguono un'autoregressione su se stessi $n$ volte, infatti:
+
+  \[ y(t)=\sum_{i=1}^{n}{a_iy(t-i)}+w(t), \quad w(t)\sim WN(0,\sigma^2) \]
+  
+Calcolando la sua funzione di trasferimento otteniamo quanto segue:
+
+  \[ G(z)=\frac{1}{1-\sum_{i=1}^{n}{a_iz^{-i}}}=z^n\frac{1}{z^n-\sum_{i=1}^{n}{a_iz^{n-i}}} \]
+  
+La funzione di trasferimento è caratterizzata da $n$ zeri nell'origine e da $n$ poli; è evidente che in generale non possiamo dire che un processo con con questa funzione di trasferimento sia stabile\footnote{cosa che invece abbiamo fatto per i processi MA perché quel tipo di funzione di trasferimento ha $n$ poli nell'origine e quindi è stabile}; per determinare la stabilità occorre verificare che tutti i poli siano in modulo minori di 1 $\|a_i\|\leq 1, \forall i$, se questa condizione è soddisfatta allora il processo è denominato $AR(n)$ ed è un PC stazionario (ergodico), inoltre, questo tipo di processo è l'unico che soddisfa l'autoregressione. Quanto abbiamo detto circa la stazionarierà del processo è vero solo quando il processo è a regime, quando il processo è ancora in una fase di transizione, il processo non è stazionario, ma sappiamo che lo sarà a regime.\newline
+Il processo ha valore atteso:
+
+  \[ E[y(t)]=G(1)E[w(t)]=\mu E[w(t)] \]
+  
+\noindent ed autocovarianza, che dipende dalle equazioni di Yule-Walker che possiamo scrivere come sistema matriciale nel seguente modo:
+
+  \[ \tiny
+    \begin{split}
+     &\begin{bmatrix}
+        \gamma_{yy}(1) \\ \gamma_{yy}(2) \\ \vdots \\ \gamma_{yy}(n)
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        \gamma_{yy}(0) & \gamma_{yy}(1) & \gamma_{yy}(2) & ... & \gamma_{yy}(n-3) & \gamma_{yy}(n-2) & \gamma_{yy}(n-1) \\
+        \gamma_{yy}(1) & \gamma_{yy}(0) & \gamma_{yy}(1) & ... & \gamma_{yy}(n-4) & \gamma_{yy}(n-3) & \gamma_{yy}(n-2) \\
+        \gamma_{yy}(2) & \gamma_{yy}(1) & \gamma_{yy}(0) & ... & \gamma_{yy}(n-5) & \gamma_{yy}(n-4) & \gamma_{yy}(n-3) \\
+        \vdots         &  \vdots        & \vdots         & \ddots & \vdots        & \vdots           & \vdots \\
+        \gamma_{yy}(n-3) & \gamma_{yy}(n-4) & \gamma_{yy}(n-5) & ... & \gamma_{yy}(0) & \gamma_{yy}(1) & \gamma_{yy}(2) \\
+        \gamma_{yy}(n-2) & \gamma_{yy}(n-3) & \gamma_{yy}(n-4) & ... & \gamma_{yy}(1) & \gamma_{yy}(0) & \gamma_{yy}(1) \\
+        \gamma_{yy}(n-1) & \gamma_{yy}(n-2) & \gamma_{yy}(n-3) & ... & \gamma_{yy}(2) & \gamma_{yy}(1) & \gamma_{yy}(0) \\
+      \end{bmatrix}
+      \begin{bmatrix}
+        a_1 \\ a_2 \\ \vdots \\ a_n
+      \end{bmatrix}
+    \end{split}
+   \]
+\noindent Questo è un sistema ad $n-1$ equazioni ed $n-1$ incognite. Infine, risolto il sistema:
+
+    \[\gamma_{yy}(0)-\sigma^2=\sum_{i=1}^{n}{a_i\gamma_{yy}(i)}  \]
+
+\noindent Le densità spettrali di potenza in $Z$ ed in $\omega$ saranno, rispettivamente:
+
+  \begin{align*}
+    \Phi_{yy}(z)&=\sigma^2G(z)G(z^{-1})\\
+    \Gamma_{yy}(\omega)&=\Phi_{yy}(e^{j\omega})
+  \end{align*}
+
+\begin{esempio}
+Si consideri un proceso AR(1), descritto dalla seguente equazione:
+
+  \[ y(t)=a_1y(t-1)+w(t),\quad w(t) \sim WN(0,\sigma^2) \]
+  
+Ipotizziamo che $0<|a_1|<1$ altrimenti il sistema non è stabile e quindi non può essere un processo stazionario. Il valore atteso sarà:
+
+  \[ E[y(t)]=E[a_1y(t-1)+w(t)]=a_1E[y(t-1)]+E[w(t)]=a_1E[y(t-1)] \]
+
+l'ultimo passaggio è reso possibile dal fatto che $E[w(t)]=0$ come da consegna, se fosse stato diverso, bisogna tenerne conto. Dato che stiamo trattando processi stazionari, le proprietà statistiche non cambiano nel tempo perciò $E[y(t)]=E[y(t-1)]$ e quindi possiamo scrivere:
+
+  \[ E[y(t)]=a_1E[y(t)] \Longleftrightarrow (1-a_1)E[y(t)]=0 \Longleftrightarrow E[y(t)]=0 \]
+
+dato che $a_1 \neq 0$ allora ne consegue che è il valore atteso ad essere nullo. Nel caso in cui $E[w(t)]=m_w$:
+
+  \[ E[y(t)]=E[a_1y(t-1)+w(t)]=a_1E[y(t-1)]+E[w(t)]=a_1E[y(t-1)]+m_w= \]
+  
+sempre considerando che è un processo stazionario:
+
+  \[  E[y(t)]=a_1E[y(t)]+m_w \Longleftrightarrow  (1-a_1)E[y(t)]=m_w \Longleftrightarrow  E[y(t)]=\frac{m_w}{1-a}\]
+  
+Per quanto riguarda l'autocovarianza, invece, partiamo da una considerazione circa la varianza del processo:
+
+  \[ Var[y(t)]=Var[a_1y(t-1)+w(t)]=Var[a_1y(t-1)]+Var[w(t)]=a_1^2Var[y(t-1)]+\sigma^2 \]
+  
+Il processo all'istante $y(t-1)$ è indipendente rispetto a $w(t)$, dipende solo dagli istanti precedenti ma non da quello attuale; per questo motivo abbiamo potuto scrivere la somma di varianze senza tener conto della coovarianza. Quando il sistema è a regime sappiamo che $Var[y(t-1)]=Var[y(t)]$ perché è un PC stazionario, per cui:
+
+  \[ Var[y(t)]=a_1^2Var[y(t)]+\sigma^2 \Longleftrightarrow (1-a_1^2)Var[y(t)]=\sigma^2 \Longleftrightarrow Var[y(t)]=\frac{\sigma^2}{1-a_1^2} \]
+
+Avendo calcolato la varianza, conosciamo anche il valore dell'autocoovarianza $\gamma_{yy}(0)=Var[y(t)]$. A questo punto il calcolo dell'autocoovarianza per un generico $\tau$ diventa:
+
+  \[ 
+    \begin{split}
+      \gamma_{yy}(\tau)&=E[y(t)y(t+\tau)]=E[y(t)(a_1y(t-1+\tau)+w(t+\tau))]=\\
+      &=E[y(t)w(t+\tau)+a_1y(t)y(t-1+\tau)]=E[y(t)w(t+\tau)]+a_1E[y(t)y(t-1+\tau)]=\\
+      &=E[y(t)]E[w(t+\tau)]+a_1\gamma_{yy}(\tau-1)=a_1\gamma_{yy}(\tau-1)
+    \end{split}
+   \]
+
+Calcoliamo l'autocovarianza per alcuni valori di $\tau$:
+
+  \begin{align*}
+    \gamma_{yy}(1)=a_1\gamma_{yy}(0)=a_1\frac{\sigma^2}{1-a_1^2}=\frac{a_1\sigma^2}{1-a_1^2},\quad \tau=1\\
+    \gamma_{yy}(2)=a_1\gamma_{yy}(1)=a_1\frac{a_1\sigma^2}{1-a_1^2}=\frac{a_1^2\sigma^2}{1-a_1^2},\quad \tau=2
+  \end{align*}
+
+possiamo concludere con una formula generica per la coovarianza di AR(1):
+
+  \[ \gamma_{yy}(\tau)=\frac{a_1^\tau\sigma^2}{1-a_1^2} \]
+  
+Calcoliamo ora la funzione di trasferimento del processo:
+
+  \[ G(z)=\frac{1}{1-a_1z^{-1}} \]
+  
+da cui possiamo ricavare la densità spettrale di potenza in $z$:
+
+  \[ \Phi_{yy}(z)=\sigma^2G(z)G(z^{-1})=\sigma^2\frac{1}{1-a_1z^{-1}}\frac{1}{1-a_1z}=\sigma^2\frac{1}{1-a_1(z+z^{-1})+a_1^2} \]
+
+e la densità spettrale di potenza in $\omega$
+
+  \[ 
+    \begin{split}
+      \Gamma_{yy}(\omega)&=\Phi_{yy}(e^{j\omega})=\sigma^2\frac{1}{1-a_1(e^{j\omega}+e^{-j\omega})+a_1^2}= \\
+      &=\sigma^2\frac{1}{1-a_1(\cos(\omega)+j\sin(\omega)+\cos(\omega)-j\sin(\omega))+a_1^2}=\\
+      &=\sigma^2\frac{1}{1-2a_1\cos(\omega)+a_1^2}
+    \end{split}
+  \]
+Sappiamo di non aver fatto errori perché la densità spettrale di potenza in $\omega$:
+\begin{itemize}
+   \item è reale $\Gamma_{yy}(\omega)\in \mathbb{R}$
+   \item è definita positiva $\Gamma_{yy}(\omega) \geq 0$
+   \item è pari $\Gamma_{yy}(\omega) =\Gamma_{yy}(-\omega)$
+ \end{itemize}
+$\quad$
+\end{esempio}

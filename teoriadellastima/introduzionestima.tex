@@ -1,0 +1,48 @@
+\section{Introduzione}
+
+Molto spesso, durante l'analisi dei dati, non sono note le densità di probabilità - ddp - ma sono disponibili solo dei dati sperimentali, quindi vorremmo poter estrarre informazioni dai dati per procedere ad un'analisi statistica; il processo di estrazione di queste informazioni è il processo di stima. Il processo di stima di un'informazione (parametro) si basa sull'uso dello stimatore \index{Stimatore}, ovvero, una funzione deterministica che è in grado di calcolare un parametro in funzione dei dati disponibili. In letteratura esistono molti stimatori per particolari parametri, ma in generale come si crea uno stimatore?
+
+\begin{figure}[htbp]
+  \centering
+  \[
+    \begin{CD}
+      \framebox{$\theta^0$} @>>> \framebox{$f_X^{\theta^0}(x)$} @>X>> \framebox{$g(X)$} @>>> \framebox{$\hat{\theta}$}
+    \end{CD}
+  \]
+  \caption{Diagramma di stima\label{fig:diagrammastima}}
+\end{figure}
+
+
+
+$\theta^0$  è un vettore di parametri \index{Parametri} che vengono usati per generare l'esperimento. Alcuni o tutti questi parametri sono ignoti e sarà nostro compito stimarne il valore. \newline
+
+$f_X^{\theta^0}(x)$ è una funzione di densità congiunta che dai parametri genera i dati sperimentali \newline
+
+$g(X)$ è la funzione stimatore; a partire dai dati sperimentali fornisce un valore di stima per i parametri $\theta^0$ \newline
+
+$\hat{\theta}$ è il vettore che stima i parametri
+
+Dato che il risultato dello stimatore è una variabile casuale - V.C. - non è detto che la sua stima sia esatta; quello che si cerca di fare è far sì che il valore di stima sia il più possibile vicino al valore esatto con un errore, possibilmente, piccolo.
+
+\begin{esempio}
+
+Stimare la media $m$ e la deviazione standard $\sigma$ di una V.C. gaussiana
+
+  \[ \theta^0=\begin{bmatrix}\theta_1^0 \\ \theta_2^0  \end{bmatrix}=\begin{bmatrix} m \\ \sigma \end{bmatrix} \]
+
+Noi sappiamo che i dati sperimentali sono generati a partire da dei particolari parametri:
+% ci avevo messo qualcosa ma nn ricordo cosa
+in questo caso da media e deviazione standard. Questi sono i veri parametri dell'esperimento ma che sono a noi ignoti, in quanto, disponiamo solo dei dati sperimentali. Sappiamo però che le V.C. che fanno riferimento ai singoli dati sono gaussiane e quindi hanno una ddp a noi nota:
+
+    \[ f_{X_i}^{\theta^0}(x_i)= \frac{1}{\sqrt{2\pi \theta_2^0} }e^{- \frac{1}{2} \left( \frac{(x_i-\theta_1^o)}{\theta_2^0} \right) ^2}  \]
+
+La nostra ddp congiunta dell'esperimento è data dalla produttoria di tutte le ddp dei dati, quindi, supponendo di avere $N$ dati avremo:
+
+    \[ f_X^{\theta^0}(x)=\prod_{i=1}^{N} f_{X_i}^{\theta^0}(x_i)  = \frac{1}{\sqrt{(2\pi \theta_2^0)^N} }e^{- \frac{1}{2}  \sum_{i=1}^{N}{ \left( \frac{(x_i-\theta_1^o)}{\theta_2^0} \right) ^2}  } \]
+
+usando ora una funzione stimatrice, ad esempio la media campionaria per la media, possiamo scrivere:
+
+  \[
+    \hat{\theta} = \begin{bmatrix} \hat{\theta}_1 \\ \hat{\theta}_2 \end{bmatrix} =  \begin{bmatrix} g_1(X) \\ g_2(X) \end{bmatrix} , \quad g_1(X)=\frac{1}{N}\sum _{i=1} ^{N} {x_i}
+  \]
+\end{esempio}

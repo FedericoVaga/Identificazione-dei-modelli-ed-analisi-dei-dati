@@ -1,0 +1,13 @@
+\section{Stima dello spettro - Periodogrammi}
+L'idea di base nella stima dello spettro\index{Stima dello spettro} è di trasformare secondo Fourier\index{Trasformata di Forurier} la stima dell'autocoovarianza\index{Stima dell'autocovarianza} $c_{xx}$ invece che l'autocoovarianza\index{Autocovarianza} $\gamma_{xx}$. Otteniamo quindi il seguente periodogramma:
+
+  \[ I_N(\omega):=\sum_{\tau=-(N-1)}^{N-1}{c_{xx}(\tau)e^{-j\omega\tau}} \]
+  
+Da notare che non eseguiamo la sommatoria in $[-\infty;\infty]$ perché stiamo usano $c_{xx}$ che è definita solo in $[-(N-1);N-1]$ e la consideriamo nulla altrove, quindi sarebbe uno spreco computazionale ampliare la sommatoria.
+
+\subsection{Media di periodogrammi - Metodo di Bartlett}
+Per processi che si comportano come il rumore bianco, il periodogramma non è un buon stimatore perché ha una varianza troppo elevata. Si cerca di compensare con la media dei periodogrammi\index{Media dei periodogrammi}. Per calcolare questo stimatore, si divide l'intervallo $[0,N-1]$ in intervalli di ampezza $M$, chiamati finestre, e per ognuno di questi si calcola la media del periodogramma\footnote{limitato all'intervalli di ampiezza $M$ che si sta considerando}. Con questo algoritmo riusciamo a ridurre la varianza di un fattore $\frac{M}{N}$
+\paragraph{Osservazione 1} La polarizzazione è la stessa di $I_M(\omega)$
+\paragraph{Osservazione 2} Per ridurre la varianza dobbiamo aumentare il numero di finestre $K=\frac{N}{M}$, ma questo significa avere finestre piccole che creano periodi peggiori.
+\paragraph{Osservazione 3} Se siamo a conoscenza del fatto che nello spettro vi sono dei picchi sottile, allora dovremo scegliere l'ampiezza delle finestre $M$ abbastanza grande, di contro avendo finestre grandi la varianza viene ridotta di poco.\newline\newline
+Dalle osservazioni 2 e 3 viene difficile scegliere con precisione l'ampiezza da usare per le finestre, l'unico metodo è procedere per tentativi e scegliere il caso migliore.

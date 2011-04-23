@@ -1,0 +1,21 @@
+\section{Stimatore Blue Linear Unbiased Extimator - BLUE}
+\index{Stima BLUE}
+Se dalla stima ML togliamo l'ipotesi di gaussianità di $V$, ma assumiamo, genericamente:
+
+    \[ Y=\Phi\theta+V, \quad  E[V]=0, \quad Var[V]=\sigma^2\psi \]
+
+con $\psi$ noto e $\sigma^2$ eventualmente incognito.
+\paragraph{Teorema Gauss-Markov}\index{Gauss-Markov, teorema} si consideri l'errore $J^M(\theta):=\varepsilon^T\psi^{-1}\varepsilon$ che è minimizzato da:
+
+  \[ \theta^M=(\Phi^T\psi^{-1}\Phi)^{-1}\Phi^T\psi^{-1}Y \]
+  
+allora:
+\begin{itemize}
+  \item tra tutti gli stimatori lineari e non polarizzati, $\theta^M$ minimizza anche $Var[\hat{\theta}-\theta^0]$. Per questo motivo anche se non è il miglior stimatore in assoluto, è il migliore fra i lineari
+  \item $Var[\theta^M]=\sigma^2(\Phi^T\psi^{-1}\Phi)^{-1}$
+\end{itemize}
+\paragraph{Osservazione 1} Non possiamo dire che è uno stimatore ML perché non ho le ipotesi sulla gaussianità dell'errore
+\paragraph{Osservazione 2} Se $Var[V]=\sigma^2I$ allora $\theta^M=\theta^{LS}$
+\paragraph{Osservazione 3} $\hat{\sigma}^2=\frac{J^M(\theta^M)}{N-q}$ è una stima non polarizzata
+\paragraph{Osservazione 4} usando $\sigma^2$ o $\hat{\sigma}^2$ si può stimare $Var[\theta^M]=\Sigma_{\theta^M}=\hat{\sigma}^2(\Phi^T\psi^{-1}\Phi)^{-1}$
+\paragraph{Osservazione 5} dato che non conosciamo la ddp di $V$ $J^M(\theta^M)$ non si comporta come una $\chi_{N-q}^2$. Inoltre non si può calcolare l'intervallo di confidenza $I_\gamma$; quello che possiamo fare però è fornire le deviazioni standard dei parametri.

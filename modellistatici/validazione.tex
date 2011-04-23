@@ -1,0 +1,170 @@
+\section{Validazione e scelta del modello}
+Una volta creato il modello occorre chiedersi se quello prodotto è un buon modello e quali sono i suoi pregi e difetti rispetto ad altri. Quello che ci occorre ora sono dei metodi di validazione per i modelli con i quali possiamo mettere in atto dei confronti con altri. 
+% ######################################################################## test del Chi Quadro
+\subsection{Test del $\chi^2$}
+\index{Test $\chi^2$}
+Supponendo di avere a disposizione $N$ dati e di avere il modello:
+
+    \[ Y=\Phi\cdot\theta^0+V, \quad Var[V]=\sigma^2\cdot I \]
+
+come facciamo a dire se il modello li descrive adeguatamente? Supponiamo di fare una stima talmente precisa che:
+
+    \[ \theta^{LS}\cong\theta^0 \Longrightarrow \varepsilon =Y-\Phi\cdot\theta^{LS}\cong V \]
+
+e quindi la media dei residui del modello, "stima" l'errore di misura e quindi ci aspettiamo che:
+
+    \[ \frac{1}{N}\sum_{i=1}^{N}{\varepsilon_i^2}\cong\sigma^2 \]
+
+Allora se conosciamo $\sigma^2$ possiamo subito verificare che abbia lo stesso ordine di grandezza della varianza campionaria, e se differiscono in modo evidente, allora il modello spiega molto male i dati.
+Ipotizziamo di aver "azzeccato" il modello vero, e che valga l'ipostesi che:
+
+    \[ Y=\Phi\cdot\theta^0+V,  \quad  V\sim N(0,\sigma^2\cdot I) \]
+
+ne consegue il seguente teorema.
+\paragraph{Teorema} dividendo per $\sigma^2$ la somma dei quadrati dei residui\index{Somma dei quadrati dei residui, Sum of Square Residual (SSR)} -SSR- della stima LS, si ottiene una V.C. di tipo $\chi^2$ con $N-q$ gradi di libertà:
+  \[ J=\frac{\varepsilon^T\varepsilon}{\sigma^2}\sim \chi^2(N-q) \]
+%FIXME
+\begin{center}
+\textbf{[grafico]}
+\end{center}
+L'idea è di usare il $\chi_{N-1}^2$ come riferimento sulla bontà di un modello e di verificare dove cade l'SSR rispetto al livello di significatività che vogliamo. Possiamo quindi dire che scartiamo un modello se:
+
+    \[ J>x_\alpha \]
+
+mentre accettiamo il modello se:
+
+    \[ J<x_\alpha \]
+
+Ricordiamo che $J=\frac{\varepsilon^T\varepsilon}{\sigma^2}$ solo nel caso in cui $V\sim N(0,\Sigma_v)$, inoltre, il test si può estendere anche al caso in cui $V\sim N(0,\Sigma_V)$, avendo l'accortezza di usare $J=\varepsilon^T\Sigma_V\varepsilon$. \newline
+Il test del $\chi^2$ ha due principali difetti:
+\begin{itemize}
+  \item non è facile capire la causa del fallimento: potrebbe effettivamente spiegare male il modello, oppure l'errore non è gaussiano, la varianza è errata per difetto, gli errori di misura hanno varianze diverse
+  \item il test si basa sull'ipotesi che esista un vero modello lineare che spieghi i dati e che gli errori siano gaussiani. Queste due ipotesi sono molto semplificative perché la realtà è molto differente.
+\end{itemize}
+% ######################################################################## Test F
+\subsection{Test F}
+\index{Test F}
+Supponiamo sempre di avere a che fare con modelli del tipo:
+
+    \[ Y=\Phi\cdot\theta^0+V,  \quad  V\sim N(0,\sigma^2\cdot I) \]
+
+Spesso non è evidente quale sia il modello migliore e vorremmo poter scegliere quello "ottimo". Prendiamo in considerazione i modelli matrioska\index{Modelli Matrioska}, ovvero sequenze di classi di modelli in cui per ogni classe sono comprese le precedenti come casi particolari. Un esempio di modelli matrioska sono i polinomi:
+%FIXME
+\begin{center}
+\textbf{[grafico]}
+\end{center}
+In questo caso vediamo una rappresentazione tipica del problema: quale scelgo come modello? Come primo istinto si potrebbe pensare di usare il modello che minimizza l'SSR, ma sappiamo già che al crescere dell'ordine del modello l'SSR decresce e quindi l'SSR minimo è sempre in corrispondenza del modello di ordine maggiore e quindi più complesso. Ad esempio, per un campione di $N=100$ il modello migliore è approssimato da un polinomio di ordine $99$! Ovviamente non vi è alcun problema nell'usare polinomi di ordine elevato, con un altrettanto elevato numero di parametri, ma nella realtà i dati sono soggetti a rumore e quindi un polinomio di grado elevato viene influenzato dagli errori e quindi il modello seguirà troppo fedelmente l'andamento dei dati sperimentali e quindi dei suoi errori.\newline
+Per evitare modelli complessi e sbagliati usiamo il principio di parsimonia, ovvero, usiamo la classe di ordine minore fintanto che la classe di ordine maggiore non ha un SSR molto minore. Perché il principio sia completo occorre indicare cosa s'intende per molto minore; usiamo come indica di riduzione percentuale dell'SSR:
+
+    \[ f:=(N-k)\frac{SSR_{K-1}-SSR_k}{SSR_k} \]
+
+$f$ è una V.C. distribuita come una $F$ di Fisher\index{Distribuzione di Fisher} con (1,N-k) gradi di libertà; inoltre osserviamo che:
+
+    \[ \lim_{N-k\rightarrow\infty} {F(1,N-k)}=\chi_1^2 \]
+
+A questo punto fissiamo il livello di significatività $\alpha$ e cerchiamo sulla tabella di Fischer:
+
+    \[ f_\alpha \mid P(F(\,N-k)<f_\alpha)=1-\alpha \]
+
+e quindi se $f>f_\alpha$ scelgo il modello $M_k$, altrimenti, se $f<f_\alpha$ scelgo il modello $M_{k-1}$
+Concludiamo con alcune osservazioni sul test F. Non occorrono informazioni circa la varianza $\sigma^2$, inoltre il test è soggettivo, infatti, dobbiamo scegliere il parametro $\alpha$ con cui discriminare i modelli: con un $\alpha$ piccolo si tende a sottostimare l'ordine, mentre con un $\alpha$ grande si tende a sovrastimare l'ordine.\newline
+Anche il test F è soggetto a difetti:
+\begin{itemize}
+  \item si applica solo a modelli matrioska
+  \item dato che anche per il test F deve valere l'ipotesi di errori con andamento gaussiano vista per il $\chi^2$, il problema potrebbe essere che il modello vero non esista o non appartenga alla classe di modelli in esame.
+\end{itemize}
+% ######################################################################## Crossvalidazione
+\subsection{Crossvalidazione}
+\index{Test di crossvalidazione}
+Quando si hanno a disposizione abbastanza dati possiamo dividerli in due gruppi: uno da usare per identificare il modello; l'altro per verificarlo ed eventualmente capire quale sia il migliore. Indichiamo con $Y^I$ l'insieme dei dati di identificazione del modello, mentre con $Y^V$ l'insieme dei dati di validazione del modello. Questo metodo di verifica è basato in tre passi:
+
+\begin{enumerate}
+  \item si considerano i vari modelli e si stimano i parametri usando l'insieme $Y^I$, ad esempio con la stima LS: $\theta^{LS}=(\Phi^T\Phi)^{-1}\Phi^TY^I$
+  \item con i modelli identificati si cerca di prevedere i dati di validazione e si calcolano i residui, quindi: $SSR^V=\varepsilon^{V^T}\varepsilon^V$ dove $\varepsilon^V=Y-\hat{Y}$ e $\hat{Y}=\Phi^V\theta^{LS}$
+  \item si sceglie il modello che genera l'$SSR^V$ minimo
+\end{enumerate}
+
+Facciamo alcune osservazioni sul metodo. 
+\paragraph{Osservazione 1} Innanzitutto la divisione in due gruppi dev'essere casuale per evitare di influenzare il modello con scelte soggettive.
+\paragraph{Osservazione 2} Quando si ha a che fare con dei modelli matrioska l'$SSR^I$ decresce al crescere dell'ordine, anche l'$SSR^V$ ha lo stesso comportamento, ma ad un certo punto il modello segue troppo fedelmente i dati di identificazione $Y^I$ e quindi l'$SSR^V$ riprende a crescere.
+\paragraph{Osservazione 3} Talvolta questo processo suggerisce l'uso di modelli in cui alcuni parametri hanno una deviazione standard elevata. Conviene provare ad azzerarli e ricalcolare l'$SSR^V$. Se cambia di poco (1\%, 2\% ) rispetto al minimo, può essere conveniente usare il modello semplificato.
+\paragraph{Osservazione 4} Non si cerca il modello vero, ma si cerca il migliore con una buona probabilità
+% ######################################################################## Ordinary CrossValidation (OCV) e Generalized Cross Validation (GCV)
+\subsection{Ordinary CrossValidation (OCV) e Generalized Cross Validation (GCV)}
+\index{Test Ordinary CrossValidation (OCV)}
+Nel caso in cui non si hanno a disposizione abbastanza dati per formare due gruppi, si può usare la OCV. Per identificare il modello e stimare i parametri si usano tutti i dati a disposizione meno uno, poi si calcola l'errore che si commette calcolando il valore scartato usando il modello. Si ripete questa procedura scartando man mano un elemento diverso l'indice OCV\footnote{altro non è che la media dei residui meno quello scartato}:
+
+    \[ OCV=\frac{1}{N}\sum_{j=1}^{N}{\varepsilon_j^{(i)^2}},  \quad    {\varepsilon^{(i)}}=Y_i-\Phi^{(i)}\theta^{(i)^{LS}} \]
+
+dove $Y_i$ è l'i-esimo valore scartato, $\Phi^{(i)}$ è il modello costruito senza l'i-esimo elemento e $\theta^{(i)^{LS}}$ è la stima dei parametri senza l'i-esimo elemento.\newline
+Il grosso problema è che dobbiamo risolvere $N$ problemi di stima LS e questo è computazionalmente oneroso. Ci viene in aiuto il lemma del "lasciane uno fuori" (leaveout one lemma)
+
+    \[ OCV=\frac{1}{N}\sum_{j=1}^{N}\frac{\varepsilon_j^2}{(1-H_{jj})^2}, \quad  H=\Phi(\Phi^T\Phi)^{-1}\Phi^T,  \quad  \varepsilon=Y-\Phi\theta^{LS} \]
+
+In questo modo si stima una sola volta e si calcola la diagonale di $H$. Computazionalmente rimane più oneroso rispetto alla crossvalidazione; possiamo ridurre ulteriormente il carico con la Generalized Cross Validation\index{Test di Generalized CrossValidation (GCV)}:
+
+    \[ GCV=\frac{1}{N}\frac{\sum_{j=1}^{N}{\varepsilon_j^2}}{(\frac{1}{N}Tr(1-H))^2}=\frac{1}{N}\frac{\sum_{j=1}^{N}{\varepsilon_j}}{(\frac{N-q}{N})^2}=SSR\frac{N}{(N-1)^2} \]
+
+Il punto debole della crossvalidazione per i piccoli gruppi di dati sorge quando questi non hanno tutti la stessa varianza.
+% ######################################################################## Final Prediction Error - FPE
+\subsection{Final Prediction Error - FPE}
+\index{Test Final Prediction Error (FPE)}
+Se facessimo delle ipotesi sul meccanismo di generazione dei dati possiamo minimizzare $SSR^V$ senza calcolarla esplicitamente. Ipotizziamo\footnote{da notare che non stiamo ipotizzando la gaussianità dell'errore} che:
+
+    \[ Y=\Phi\theta^0+V,\quad E[V]=0,\quad  Var[V]=\sigma^2 I \]
+
+Supponendo ora di avere un vettore di parametri $\theta$ e che il modello per l'identificazione sia lo stesso della validazione, é dimostrabile che se si estrae un campione $Y^V$ di $N$ dati:
+
+    \[ E[SSR^V]=N \sigma^2+(\theta-\theta^0)^T\Phi^T\Phi(\theta-\theta^0) \]
+
+ovviamente $\theta=\theta^0$\footnote{$\theta=\theta^0$ significa che stiamo usando il modello vero} minimizza $E[SSR^V]$. Supponiamo ora che $\theta=\theta^{LS}$ sia la stima ottenuta da un campione $Y^I$, è dimostrabile che:
+
+    \[ E[E[SSR^V]]=\sigma^2(N+q) \]
+
+Da notare che vi è un valore atteso annidato perché abbiamo due estrazioni. Quello che abbiamo ricavato è una formulazione matematica del principio di parsimonia: se il modello vero è di ordine $k$, usare ordini superiori peggiora le prestazioni medie in fase di validazione. Molto spesso $\sigma^2$ non è nota; uno stimatore non polarizzato per $\sigma^2$ è:
+
+    \[ \hat{\sigma}^2=\frac{SSR}{N-q} \]
+
+Veniamo ora al criterio FPE vero e proprio. Tra diversi modelli matrioska con $q$ parametri fissati, si sceglie quello che minimizza la media stimata dell'$SSR^V$:
+
+    \[ FPE=E[E[SSR^V]]=\hat{\sigma^2}(N+q)=\frac{N+q}{N-q}SSR \]
+
+\paragraph{Osservazione 1} Al crescere di $q$ l'indice $FPE$ diminuisce con $SSR$, ma se $q$ cresce troppo, $FPE$ inizia a crescere, infatti $\lim_{q\rightarrow\infty}{\frac{N+q}{N-q}}=\infty$. Da questa osservazione concludiamo che esiste sempre un punto di minimo per l'indice $FPE$
+\paragraph{Osservazione 2} Computazionalmente il criterio FPE è efficiente, infatti basta conoscere la stima dei parametri
+\paragraph{Osservazione 3} Il criterio tende a sovrastimare (in media) l'ordine del modello al crescere dei dati. Non è uno stimatore consistente dell'ordine del modello,
+% ######################################################################## Akaike Information Criterion - AIC
+\subsection{Akaike Information Criterion - AIC}
+\index{Test Akaike Information Criterion (AIC)}
+Questo criterio vale sotto l'ipotesi di gaussianità dell'errore:
+
+    \[ Y=\Phi\cdot\theta^0+V, \quad  V\sim N(0,\sigma^2\cdot I) \]
+
+e che si stiano valutando dei modelli matrioska\index{Modelli matrioska}. Il criterio si basa sul calcolo della distanza fra la ddp dei dati e quella del modello stimato. Fra i modelli a $q$ parametri scelgo quello che minimizza:
+
+    \[ AIC=\frac{2q}{N}+\ln SSR \]
+
+\paragraph{Osservazione 1} $\lim_{N \rightarrow \infty} \ln FPE = AIC $ ne deduciamo che il criterio AIC tende a sovrastimare il modello al crescere dei dati
+% ########################################################################
+\subsection{Minimum Description Length - MDL}
+\index{Test Minimum Description Length (MDL)}
+Questo è un criterio che viene utilizzato quando si devono trasmettere dei dati. Invece di trasmettere i dati veri si può pensare di trasmettere la stima $\theta^{LS}$ e i residui $\varepsilon$ di modo che in ricezione si ricostruisca il dato con l'operazione:
+
+    \[ Y=\Phi\theta^{LS}+\varepsilon \]
+
+Il vantaggio è che se il modello è buono l'errore di predizione è piccolo e per codificarlo bastano pochi bit. Questo porta ad un risparmio in archiviazione e trasmissione.
+Il criterio MDL serve a scegliere il modello con codifica più compatta. Sotto l'ipotesi:
+
+    \[ Y=\Phi\cdot\theta^0+V, \quad V\sim N(0,\sigma^2\cdot I) \]
+
+la scelta del modello si basa su quello che minimizza l'equazione:
+
+    \[ MDL=\frac{\ln(N)+q}{N}+\ln(SSR) \]
+
+\paragraph{Osservazione 1} Se l'ordine $q$ del modello aumenta, $SSR$ diminuisce e quindi anche il residuo $\varepsilon$; serviranno pochi bit a codificare $\varepsilon$ ma aumentano quelli necessari a codificare $\theta^{LS}$
+\paragraph{Osservazione 2} Il criterio indica, asintotticamente al crescere dei dati, l'ordine vero del modello.
+% ########################################################################
+\subsection{Conclusioni}
+Innanzi tutto dividiamo i criteri oggettivi da quello soggettivi. Indichiamo con criteri soggettivi quelli che necessitano di scelte soggettive come, ad esempio, il test F e il test $\chi^2$. Indichiamo con criteri oggettivi quelli basati sulla minimizazione di un indice di merito, come: crossvalidazione, OCV, GCV, FPE, AIC, MDL. La differenza è in realtà meno profonda di quanto sembri, infatti, per $N$ grande $FPE$ equivale al test F con $\alpha=0.157$, quindi FPE ha il 15.7\% di probabilità di scegliere (erroneamente) un modello più complesso.
+L'unico metodo che non richiede ipotesi pesanti è la crossvalidazione, ma nella pratica FPE, AIC e MDL vengono usati senza particolari problemi.
+Un suggerimento può essere quello di usare più di un criterio e valutare, inoltre, che la deviazione standard dei parametri non sia troppo discordante fra i diversi criteri.
+In conclusione possiamo dire che, asintotticamente al crescere dei dati, il criterio MDL è meglio di FPE e AIC.

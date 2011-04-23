@@ -1,0 +1,18 @@
+\section{Processi ARMAX}
+I processi AutoRegressive Moving Average eXogenous $ARMAX(n_a,n_b,n_c,k)$ sono processi ARMA che prevedono l'intervento sul sistema di un processo esogeno $u(t)$; l'equazione dei sistemi ARMAX è la seguente:
+
+   \begin{align*}
+   y(t)&=\left[ \sum_{i=1}^{n_a}{a_iy(t-i)}\right]+\left[\sum_{i=0}^{n_b}{b_iu(t-k-i)}\right]+w(t)+\left[ \sum_{i=1}^{n_c}{c_iw(t-i)}\right]\\
+   &, \quad w(t) \sim WN(0,\sigma^2)\\
+   &,\quad u(t)\quad \text{ingresso deterministico esogeno}
+   \end{align*} 
+con:
+  \[ Y(z)= G(z)U(z)+H(z)W(z)\]
+dove:
+  \begin{align*}
+    G(z)&=z^{-k}\frac{B(z)}{A(z)}\\
+    H(z)&=\frac{C(z)}{A(z)}\\
+    A(z)&=1-\sum_{i=1}^{n_a}{a_iz^{-1}}\\
+    B(z)&=b_0+\sum_{i=1}^{n_b}{b_iz^{-1}}\\
+    C(z)&=1+\sum_{i=1}^{n_c}{c_iz^{-1}}
+  \end{align*}

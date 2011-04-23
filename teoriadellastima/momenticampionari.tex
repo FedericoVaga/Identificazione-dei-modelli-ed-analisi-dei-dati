@@ -1,0 +1,136 @@
+\section{Stima dei momenti di una variabile casuale: momenti campionari}
+% ######################################################################## Dai momenti ai momenti campionari
+\subsection{Dai momenti ai momenti campionari}
+
+Nel nostro classico problema di stima abbiamo a che fare con un esperimento casuale che fornisce $N$ valori $X_i$,  V.C. indipendenti ed identicamente distribuite\footnote{significa che hanno tutte la stessa densità di probabilità -ddp-} - iid - con $f_{X_i}(x_i)$ nota. Dato che le V.C. sono iid possiamo scrivere: 
+
+    \[ f_X(x)=\prod_{i=1}^{N}{f_{X_i}(x_i)} \]
+
+inoltre, sappiamo: 
+
+  \begin{align*}
+      E[X_i]&=m, \forall i \\
+    Var[X_i]&=\sigma^2, \forall i
+  \end{align*}
+  
+Da queste considerazioni, quello che vogliamo ottenere è una stima dei momenti di $X_i$. 
+Nel dominio continuo, i momenti sono valori esatti che dipendono dalla ddp e possiamo scriverli come: 
+
+  \begin{align*}
+      m_k&=\int_{-\infty }^{\infty} {x^k \cdot f(x) \cdot dx} \quad &\text{momento di ordine k}\\
+    \mu_k&=\int_{-\infty }^{\infty} {(x-m_1)^k \cdot f(x) \cdot dx} \quad &\text{momento centrale di ordine k}
+  \end{align*}
+  
+Dato che non abbiamo a disposizione la ddp, non possiamo calcolare i momenti in questo modo, ma possiamo affidarci ai momenti campionari che essendo stimatori non forniscono i valori esatti, ma una V.C. dipendente dai dati\footnote{ovvero da altre V.C.}:
+ 
+  \begin{align*}
+    M_k&=\frac{1}{N}\sum_{i=1}^{N} {X_i^k} &\text{momento campionario di ordine k}\\
+    S_k&=\frac{1}{N}\sum_{i=1}^{N} {(X_i-M_1)^k} &\text{momento campionario centrale di ordine k}
+  \end{align*}
+  
+Da notare che i due tipi di momenti sono molto diversi, infatti, il momento campionario fa riferimento solo ad un particolare esperimento, per cui la sua ripetizione potrebbe far cambiare il valore del momento campionario, invece, il momento è un valore assoluto che dipende solo dalla ddp dell'esperimento, e quindi alla ripetizione dell'esperimento il momento non cambia.
+% ######################################################################## Proprietà dei momenti campionari
+\subsection{Proprietà dei momenti campionari}
+\subsubsection{Media campionaria - momento campionario di ordine 1}%###############
+Il momento campionario di ordine 1, ovvero la media campionaria \index{Media campionaria}, è uno stimatore non polarizzato:
+
+    \[ M_1=\frac{1}{N} \sum_{i=1}^{N} X_i \]
+
+Il valore atteso per la media campionaria è la media, infatti:
+
+    \[ E[M_1]=E\left[\frac{1}{N}\sum_{i=1}^{N}{x_i}\right]=\frac{1}{N}E\left[\sum_{i=1}^{N}{x_i}\right]=\frac{1}{N}\sum_{i=1}^{N}{E[x_i]}=\frac{1}{N}Nm=m \]
+
+La media campionaria è anche uno stimatore consistente, infatti la sua varianza diminuisce all'aumentare dei campioni, il che significa che i suoi valori si stanno concentrando in un particolare punto:
+
+    \[ Var[M_1]=Var\left[\frac{1}{N}\sum_{i=1}^{N}{x_i}\right]=\frac{1}{N^2}\sum_{i=1}^{N}{Var[x_i]}=\frac{1}{N^2}N\sigma^2=\frac{\sigma^2}{N} \]
+
+La media campionaria è anche asintotticamente normale. Sappiamo che se $f_{X_i}$ è una gaussiana, allora anche $M_1$ sarà gaussiana; mentre, se $f_{X_i}$ non è gaussiana $M_1$, per il teorema del limite centrale, tende alla gaussianità per $N\rightarrow\infty$, ovvero al crescere dei dati raccolti.\newline
+
+%FIXME riguardarsi il significato
+Infine, osserviamo che, essendo:
+
+  \begin{gather*}
+    Z:=\frac{M_1-E[M_1]}{\sqrt{Var[M_1]}}=\frac{M_1-m}{\frac{\sigma}{\sqrt{N}}} \Rightarrow M_1=m+\frac{\sigma}{\sqrt{N}}Z = m+e
+    \lim_{N \rightarrow \infty}{Z}=0 
+  \end{gather*}
+  
+possiamo concludere che:
+
+    \[ \lim_{N \rightarrow \infty} M_1= m \]
+
+\subsubsection{Valore quadratico medio - momento di ordine 2}%###############
+Il momento campionario di ordine 2, ovvero il valore quadratico medio \index{Valore quadratico medio}, è uno stimatore non polarizzato:
+
+    \[ M_2 = \frac{1}{N} \sum_{i=1}^{N}{x_i^2} \]
+
+il suo valore atteso, risulta infatti:
+
+    \[ E[M_2]=\frac{1}{N} \sum_{i=1}^{N} {E[x_i^2]}=\frac{1}{N} N m_2=m_2 \]
+    
+Il valore quadratico medio è anche uno stimatore consistente, infatti la sua varianza diminuisce all'aumentare dei campioni, il che significa che i suoi valori si stanno concentrando in un punto particolare:
+  %FIXME Var[x^2]= ???
+  \[ Var[M_2]=Var[\frac{1}{N} \sum_{i=1}^{N}{x_i^2}]=\frac{1}{N^2}\sum_{i=1}^{N}{Var[x_i^2]}=\frac{1}{N^2}NVar[x^2]=\frac{Var[x^2]}{N} \]
+
+%FIXME Non mi è chiarissimo
+Nel caso in cui le $X_i$ fossero gaussiane con $E[X_i]=0$, allora $\chi_N^2=N \frac{M_2}{\sigma^2}$
+
+\subsubsection{Varianza campionaria - momento campionario centrale di ordine 2} %###############
+Il momento campionario centrale di ordine 2, ovvero la varianza campionaria\index{Varianza campionaria}, possiede due possibilità di calcolo. La prima ha come ipotesi la conoscenza della media dell'esperimento e quindi:
+
+    \[ S_m^2:=\frac{1}{N} \sum_{i=1}^{N}{(x_i-m)^2} \]
+    
+Lo stimatore così calcolato è non polarizzato, infatti:
+
+    \[E[S_m^2]=\frac{1}{N} \sum_{i=1}^{N}{E[(x_i-m)^2]}=\frac{1}{N} \sum_{i=1}^{N}{Var[x_i]}=\frac{1}{N} N \sigma^2=\sigma^2 \]
+
+La seconda possibilità, la più frequente, si ha quando non si conosce la media dell'esperimento e quindi si fa uso della sua stima $M_1$:
+
+    \[ S^2:=S_2:=\frac{1}{N} \sum_{i=1}^{N}{(x_i-M_1)^2} \]
+
+lo stimatore così ottenuto è polarizzato, infatti\footnote{$S^2=M_2-M_1^2$}\footnote{$\sigma^2=E[X^2]-m_1^2=m_2-m_1^2$}:
+
+    \[ 
+      \begin{split}
+        E[S^2] &=E[M_2]-E[M_1^2]=m_2-\left( Var[M_1]+E[M_1]^2 \right) =\\ 
+        &=m_2 -\frac{\sigma^2}{N}-m_1^2=(m_2-m_1^2)-\frac{\sigma^2}{N}=\sigma^2-\frac{\sigma^2}{N}=\frac{N-1}{N}\sigma^2
+      \end{split} 
+    \]
+
+Dato che capita spesso di non avere a disposizione la media, si è costretti ad usare $S^2$ anche se sappiamo essere polarizzato. Quello che possiamo fare per porre rimedio alla polarizzazione è correggere questo stimatore ed usare quindi la varianza campionaria corretta \index{Varianza campionaria corretta} che non è polarizzata:
+  
+  \begin{align*}
+      S_c^2:&=\frac{N}{N-1}S^2=\frac{N}{N-1}\frac{1}{N}\sum_{i=1}^{N}{(x_i-M_1)^2}=\frac{1}{N-1}\sum_{i=1}^{N}{(x_i-M_1)^2} \\
+    E[S_c^2]&=E[\frac{N}{N-1}S^2]=\frac{N}{N-1}E[S^2]=\frac{N}{N-1}\frac{N-1}{N}\sigma^2=\sigma^2
+  \end{align*}
+  
+Da notare però che l'operazione non è "indolore", infatti, l'aver voluto la non polarizzazione ha aumentato la varianza dello stimatore:
+
+    \[ Var[S_c^2]=Var[\frac{N}{N-1}S^2]=\left(\frac{N}{N-1}\right)^2Var[S^2] \]
+
+è evidente infatti che:
+
+    \[ \frac{N}{N-1}>1 \]
+
+e quindi la varianza cresce.
+
+\paragraph{Teorema di Fisher} \index{Teorema di Fischer} Se $X_i$ sono V.C. gaussiane iid, allora $S^2$ è una $\chi_{N-1}^2$ ed è indipendente da $M_1$; più precisamente:
+
+    \[ N\frac{S^2}{\sigma^2}=\sum_{i=1}^{N}{\left( \frac{x_i-M_1}{\sigma}\right)^2}=\chi_{N-1}^2 \]
+
+$\chi_{N-1}^2$ e non $\chi_N^2$ perché tutti gli addendi condividono $M_1$ e di conseguenza perdono un grado di libertà.
+
+\subsubsection{Proprietà generali}
+Per la legge dei grandi numeri, sappiamo che la media campionaria è uno stimatore consistente; per i momenti di ordine superiore? Prendiamo ad esempio il momento campionario di secondo ordine e definiamo:
+
+    \[ Y:=X^2 \]
+
+$M_2$ sarà la media campionaria per la V.C. $Y$ ; per la legge dei grandi numeri $M_2$ converge a $m_2$ :
+
+    \[ E[Y]=E[X^2]=m_2 \]
+
+Ma allora se estendiamo questo esempio anche agli ordini superiori, otteniamo che i momenti campionari sono tutti consistenti.\newline
+
+Un'altra cosa che conosciamo riguardo ai momenti campionari è che sono asintoticamente normali, questo perché sono medie di V.C. iid (lo stesso vale per i momenti campionari centrali).\newline
+
+Sui momenti campionari centrali sappiamo che se è nota la media, allora i momenti non sono polarizzati, altrimenti, risentono della polarizzazione dovuta all'uso della media campionaria all'interno del momento campionario centrale.
+  

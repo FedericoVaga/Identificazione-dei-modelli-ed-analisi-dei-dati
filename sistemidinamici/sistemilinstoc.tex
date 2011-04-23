@@ -1,0 +1,44 @@
+\section{Sistemi lineari (con ingressi) stocastici}
+Un sistema lineare con ingresso stocastico\index{Sistema lineare con ingresso stocastico}, non è altro che un sistema con in ingresso un PC stazionario (in senso lato) $u(t)$ con momenti del primo e secondo ordine:
+
+  \begin{align*}
+    m_u&=E[U(t)] &\text{non dipendente da}\quad &t\\
+    \gamma_{uu}&=Cov[u(t),u(t+\tau)] &\text{dipende solo da}\quad &\tau
+  \end{align*} 
+  
+\begin{figure}[htbp]\Large
+  \centering
+  \[
+    \begin{CD}
+      u(t) @>>> \framebox{$G(z)$} @>>> y(t)
+    \end{CD}
+  \]
+  \caption{Sistema dinamico \label{fig:sistlinstoc}}
+\end{figure}
+
+\noindent Inoltre consideriamo funzioni di straferimento $G(z)$ con poli stabili\footnote{in modulo minori di 1}. Da queste premesse ne consegue che:
+
+  \[ m_y=E[y(t)]=G(1)m_u=\mu m_u \]
+
+\paragraph{Teorema} Se $u(t)$ è un PC stazionario e il sistema è stabile, allora anche $y(t)$ è un PC stazionario; se così non fosse non potremmo parlare di spettro di $y(t)$
+
+Da qui possiamo fare alcune considerazioni sulla densità spettrale di potenza\footnote{qui rappresentate sia nel dominio della trasformata Z sia nel dominio della trasformata di Fourier}\index{Densità spettrale di potenza} del segnale d'uscita $y(t)$, possiamo scrivere:
+
+  \begin{align*}
+    \Gamma_{yy}(\omega)&=|G(e^{j\omega})|^2\Gamma_{uu}(\omega)\\
+    \Phi_{yy}(z)&=G(z)G(z^{-1})\Phi_{uu}(z)
+  \end{align*}
+  
+\noindent estendibile al caso vettoriale:
+
+  \begin{align*}
+    \Gamma_{yy}(\omega)&=G(e^{j\omega})\Gamma_{uu}(\omega)G^T(e^{-j\omega})\\
+    \Phi_{yy}(z)&=G(z)\Phi_{uu}(z)G^{-1}(z^{-1})
+  \end{align*}
+
+\paragraph{Osservazione 1} In pratica $|G(e^{j\omega})|$ è un "modulatore" della densità spettrale di ingresso.
+\paragraph{Osservazione 2} Dato $\Phi_{yy}(z)$, se riusciamo a trovare $G(z)$ stabile e tale che $\Phi_{yy}=G(z)G(z^{-1})$, allora possiamo simulare\footnote{ovvero ottenere un segnale $y(t)$ desiderato} $y(t)$ come l'uscita di un sistema $G(z)$ con ingresso un segnale $w(t)\sim WN(0,1)$. Questo perché la densità spettrale di potenza del rumore bianco è unitaria su tutto lo spettro:
+
+  \[ Y(z)=G(z)W(z) \Longrightarrow  \Phi_{yy}(z)=G(z)G(z^{-1})\Phi_{ww}(z)=G(z)G(z^{-1}) \]
+  
+In questo caso si parla di PC stazionari a spettro razionale. Da osservare che in un processo di questo tipo, se $\bar{z}$ è un polo/zero allora sono anche poli/zeri anche l'inverso e i rispettivi coniugati: $\frac{1}{\bar{z}},\bar{z}^{*},\frac{1}{\bar{z}^{*}}$

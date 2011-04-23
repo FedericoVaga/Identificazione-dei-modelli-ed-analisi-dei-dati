@@ -1,0 +1,31 @@
+\chapter{Proprietà statistiche}
+% ########################################################################
+% ########################################################################
+\section{Proprietà}
+\subsection{... del valore atteso \index{Valore atteso, proprietà}}
+  \begin{align*}
+    E[aX]&=aE[X]\\
+    E[X+Y]&=E[X]+E[Y]\\
+    E[XY]&=E[X]+E[Y] \quad \text{solo se X e Y indipendenti}
+  \end{align*}
+\subsection{... della varianza\index{Varianza, proprietà}}
+  \begin{align*}
+    Var[aX]&=a^2Var[X]\\
+    Var[X+Y]&=Var[X]+Var[Y]+2Cov[X,Y] \quad \text{da notare che se X,Y indipendenti} Cov[X,Y]=0\\
+  \end{align*}
+\section{Chi-Quadro}
+Siano $X_i$ delle V.C. gaussiane $i=1...N$ con $E[X_i]$ e $Var[X_i]=1$, tutte indipendenti. A partire da questa premessa, possiamo costruire una nuova V.C.:
+  \begin{align*}
+    \chi_N^2=\sum_{i=1}^{N}{X_i^2}
+  \end{align*}
+che prende il nome di "chi-quadro" a $N$ gradi di libertà; ne consegue, che esiste un'intera famiglia di V.C. per il chi-quadro. L'andamento del chi-quadro è mostrato nella seguente figura:\newline
+
+\begin{center}[grafico del chi-quadro]\end{center}
+
+Come si vede dal grafico $\lim_{N\rightarrow\infty}{\chi_N^2}=gaussiana$ , inoltre, possiamo dimostrare che:
+  \begin{align*}
+    E[\chi_N^2]=N
+  \end{align*}
+  \begin{align*}
+    Var[\chi_N^2]=2N
+  \end{align*}

@@ -1,0 +1,22 @@
+\section{Scelta delle variabili}
+In un modello in cui vi sono diverse variabili, ve ne potrebbero essere alcune che non influenzano il modello o comunque sono poco significative; il problema che ci poniamo ora è quello di individuare quali siano le variabili che influenzano poco o nulla il nostro modello.\newline
+Per verificare se una variabile influenza il modello , si ragiona per assurdo assumendo che il parametro associato si a nullo.\newline
+Volendo verificare se $\mu_k$ è utile al modello assumiamo, per assurdo che $\theta_k=0$ e verifichiamo se i dati sperimentali contraddicono l'assurdo.
+  \begin{align*}
+    \theta_k=0 \Rightarrow \frac{\theta_k^{ML}-E[\theta_k^{ML}]}{\sqrt{Var[\theta_k^{ML}]}}\sim Z\Rightarrow \frac{\theta_k^{ML}}{\sigma_k^{ML}}\sim Z
+  \end{align*}
+Nel 95\% dei casi vale:
+  \[    \left| z \right| \leq 1.96 \Rightarrow \left| \frac{\theta_k^{ML}}{\sigma_k^{ML}} \right|\leq 1.96 \Rightarrow \left| \theta_k^{ML} \right| \leq 1.96\sigma_{\theta_k^{ML} }  \]
+non abbiamo contraddetto l'assurdo e quindi è possibile che $\theta_k=0$ . Se, invece, vale:
+  
+    \[ |\theta_k^{ML} |>1.96\sigma_{\theta_k^{ML}} \]
+
+allora siamo in una situazione che si verifica solo nel 5\% dei casi, ipotizzando $\theta_k=0$; quindi con buona probabilità diciamo che l'ipotesi è assurda e che $\theta_k\ne 0$ in modo significativo.\newline
+In conclusione un metodo di scelta approssimativo della variabili è il seguente in tabella
+
+  \begin{align*}
+    | \theta_k^{ML} |&<2\sigma_{\theta_k^{ML}} \quad \text{non siamo sicuri sulla sua significatività della variabile}\\
+    | \theta_k^{ML} |&>2\sigma_{\theta_k^{ML}} \quad \text{siamo certi che la variabile sia significativa}
+  \end{align*}
+
+Ovviamente , dato che non c'è certezza su $\theta_k=0$ se eliminiamo una variabile potremmo commettere degli errori.

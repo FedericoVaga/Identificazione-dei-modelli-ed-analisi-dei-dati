@@ -1,0 +1,47 @@
+\chapter{Matrici}
+\section{Operazioni matriciali\label{app:operatorimatriciali}\index{Matrici, operazioni}}
+Iniziamo con la definizione di un generico vettore:
+
+  \[ x=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\x_N \end{bmatrix} \]
+
+che gode delle seguenti proprietà:
+  \begin{align*}
+     &D:=A^TA\\
+     &D=D^T \geq 0 \\
+     &x^TDx=x^TA^TAx=\| Ax \|^2 \geq 0 , \forall x
+  \end{align*}
+
+\noindent applicando una funzione $f(x):\Re^N \rightarrow \Re^1$ al vettore di dati appena definito, otteniamo:
+
+  \[ f(x)=\begin{bmatrix}f_1(x) \\ f_2(x) \\ \vdots \\ f_M(x)\end{bmatrix} \]
+
+\noindent la cui derivata è:
+
+  \[ \frac{df(x)}{dx}:=\begin{bmatrix} \frac{\partial f(x)}{\partial x_1} & \frac{\partial f(x)}{\partial x_2} & ... & \frac{\partial f(x)}{\partial x_N} \end{bmatrix} \]
+
+\noindent e la derivata seconda è definita come:
+
+  \[ \begin{bmatrix}\frac{d^2f(x)}{dx^2}\end{bmatrix}_{ij}:=\begin{bmatrix}\frac{\partial^2f(x)}{\partial x_i \partial x_j}  \end{bmatrix}, \quad \frac{d^2f(x)}{dx^2} \in \Re^{n \times n} \]
+
+\noindent Lo sviluppo di Taylor, sarà nella seguente forma:
+
+  \[ f(x)=f(x_0)+{\frac{df(x)}{dx}}\lvert(x-x_0) + {\frac{1}{2}(x-x_0)^T\frac{d^2f(x)}{dx^2}(x-x_0)}\lvert + ... \]
+
+\noindent Nel caso, invece, di una funzione del tipo $f(x):\Re^N \rightarrow \Re^M$
+
+  \[ f(x)=\begin{bmatrix}f_1(x) \\ f_2(x) \\ \vdots \\ f_M(x)\end{bmatrix}  \Longrightarrow \frac{df(x)}{dx}=\begin{bmatrix}\frac{df_1(x)}{dx}\\ \frac{df_2(x)}{dx}\\ \vdots \\ \frac{df_M(x)}{dx} \end{bmatrix}=\begin{bmatrix}\frac{df_1(x)}{dx_1} & \frac{df_1(x)}{dx_2} & ... & \frac{df_1(x)}{dx_N} \\ \frac{df_2(x)}{dx_1} & \frac{df_2(x)}{dx_2} & ... & \frac{df_2(x)}{dx_N}  \\ \vdots & \vdots & ... & \vdots \\ \frac{df_N(x)}{dx_1} & \frac{df_N(x)}{dx_2} & ... & \frac{df_N(x)}{dx_N}\end{bmatrix} \]
+
+\noindent Nel calcolo delle derivate su vettori $x$, valgono le seguenti proprietà:
+  \begin{align*}
+    &\frac{d}{dx}x=I_n \\
+    &\frac{d^2}{dx^2}(x^TAx)=2A \\
+    &\frac{d}{dx}(Ax)A\frac{d}{dx}x=A\cdot I=A\\
+    &A=A^T \Longrightarrow \frac{d}{dx}(x^TAx)=x^TA+x^TA=sx^TA\\
+  \end{align*}
+
+\noindent Date due generiche funzioni $g(x),f(x) \in \Re^{M \times 1}$, valgono le seguenti proprietà:
+  \begin{align*}
+    &\frac{d}{dx}(g(x)^Tf(x))=f(x)^T\frac{d}{dx}g(x)+g(x)^T\frac{d}{dx}f(x)\\
+    %
+    &\frac{d}{dx}(f(x)^Tf(x))=2f(x)^T\frac{d}{dx}f(x)
+  \end{align*}

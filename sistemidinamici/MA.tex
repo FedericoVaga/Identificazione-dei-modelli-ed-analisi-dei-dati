@@ -1,0 +1,137 @@
+\section{Processi Moving Average - MA}
+
+\begin{figure}[htbp]\Large
+  \centering
+  \[
+    \begin{CD}
+      \begin{CD}
+        w(t) @>>>\\
+        w(t-1) @>>>\\
+          ...  @>>>\\
+        w(t-n) @>>>
+      \end{CD}
+      \framebox{$G(z)$} @>>> y(t)
+    \end{CD}
+  \]
+  \caption{Sistema dinamico Moving Average \label{fig:ma}}
+\end{figure}
+
+\noindent Un processo di tipo Moving Average\index{Moving Average (MA)}, $MA(n)$ è definito come:
+
+  \[ y(t)=\sum_{i=0}^{n}{c_iw(t-i)}, \quad w(t) \sim WN(0,\sigma^2) \]
+
+\noindent con funzione di trasferimento:
+
+  \[ G(z)=\sum_{i=0}^{n}{c_iz^{-i}}=\frac{1}{z^n}\sum_{i=0}^{n}{c_iz^{n-i}} \]
+
+
+
+Notiamo che la funzione di traferimento ha $n$ poli nell'origine ed $n$ zeri; dato che i poli sono tutti nell'origine allora $G(z)$ è stabile e quindi $y(t)$ è un PC stazionario. Circa le proprietà statistiche, vediamo il valore atteso e l'autocovarianza:
+
+  \begin{align*}
+    E[y(t)]&=\sum_{i=0}^{n}{c_iE[w(t-i)]}\\
+    \gamma_{yy}(\tau)&=E[y(t)y(t+\tau)]
+  \end{align*}
+
+Mentre il calcolo del valore atteso è di immediato risultato, quello dell'autocovarianza necessita una verifica per passi. Iniziamo col calcolare l'autocoovarianza per $\tau=0$, che corrisponde alla varianza, infatti:
+
+  \[ 
+    \begin{split}
+  \gamma_{yy}(0)&=E[y(t)y(t)]=E[y^2(t)]=Var[y(t)]=\\
+                &=Var[\sum_{i=0}^{n}{c_iw(t-i)}]=\sum_{i=0}^{n}{Var[c_iw(t-i)]}=\\
+                &=\sum_{i=0}^{n}{c_i^2Var[w(t-i)]}=\sum_{i=0}^{n}{c_i^2\sigma^2}=\sigma^2\sum_{i=0}^{n}{c_i^2} 
+    \end{split}
+  \]
+  
+Dato che stiamo considerando PC stazionari, ovvero le proprietà statistiche non cambiano nel tempo, abbiamo semplificato l'equazione ponendo $Var[w(t-i)]=\sigma^2$. Passiamo ora a considerare $\tau=1$:
+ 
+  \[ 
+    \begin{split}
+  \gamma_{yy}(1)&=E[y(t)y(t-1)]=E\left[ \left( \sum_{i=0}^{n}{c_iw(t-i)}\right)\left( \sum_{i=0}^{n}{c_iw(t-i+1)}\right)    \right]=\\
+  &=E[(c_0w(t)+c_1w(t-1)+c_2w(t-2)+...+c_nw(t-n))\cdot\\
+  &\cdot(c_0w(t+1)+c_1w(t)+c_2w(t-1)+...+c_nw(t-n+1))]=\\
+  &=E[c_0c_0w(t)w(t+1)+c_0c_1w(t)w(t)+c_0c_2w(t)w(t-1)+...]=\\
+  &=c_0c_1E[w(t)w(t+1)]+c_0c_1E[w(t)w(t)]+c_0c_2E[w(t)w(t-1)+...]
+    \end{split}
+  \]
+  
+sapendo che $\gamma_{ww}(\tau)=E[w(t)w(t+\tau)]=0, \forall \tau\neq0$, dall'equazione precedente otterremo:
+  
+  \[ 
+    \begin{split}
+      &c_0c_1E[w(t)w(t+1)]+c_0c_1E[w(t)w(t)]+c_0c_2E[w(t)w(t-1)+...]=\\
+      =&c_0c_1E[w^2(t)]c_1c_2E[w^2(t-1)]+c_2c_3E[w^2(t-2)]+...c_{n-1}c_nE[w^2(t-n+1)]=\\
+      =&c_0c_1Var[w(t)]c_1c_2Var[w(t-1)]+c_2c_3Var[w(t-2)]+...c_{n-1}c_nVar[w(t-n+1)]=\\
+      =&\sigma^2 \sum_{i=0}^{n-1}{c_ic_{i+1}}
+    \end{split}
+   \]
+Per un generico $\tau \geq 0$ possiamo formulare la seguente equazione generale:
+  \[ 
+      \gamma_{yy}(\tau)=
+      \left\lbrace
+      \begin{split}
+         \sigma^2 \sum_{i=0}^{n-\tau}{(c_ic_{i+\tau})}\quad&,\quad 0\leq\tau\leq n \\
+         0 \quad&,\quad \tau>n
+      \end{split}\right.
+   \]
+
+\noindent La densità spettrale di potenza in Z sarà:
+
+  \[ \Phi_{yy}(z)=\sigma^2G(z)G(z^{-1}) \]
+
+\noindent da cui la densità spettrale di potenza in $\omega$:
+
+  \[ \Gamma_{yy}(\omega)=\Phi_{yy}(e^{j\omega})\]
+
+%FIXME
+[la storia della ridondanza non mi è chiarissima: perché è ridondante? e cos'ha di non ridondante la formulazione con $\tilde{y}$?]
+
+\paragraph{Osservazione 1} Se $w(t)$ è gaussiano, anche $y(t)$ è gaussiano
+\paragraph{Osservazione 2} Abbiamo una funzione di trasferimento con $n$ poli ed $n$ zeri, tutti nell'origine, quindi il sistema è stabile, e $y(t)$ stazionario
+\paragraph{Osservazione 3} Se $n=\infty$, sotto l'ipotesi che $\sum_{i=0}^{\infty}{c_i}<\infty$, allora $\lim_{i\rightarrow\infty}{c_i}=0$ quindi c'è stabilità e $y(t)$ è stazionario
+
+
+\begin{esempio}
+Si consideri un processo MA(1), descritto quindi dalla seguente equazione:
+
+  \[ y(t)=c_ow(t)+c_1w(t-1),\quad w(t) \sim WN(0,\sigma^2) \]
+  
+\noindent Calcoliamo quindi il suo valore atteso: 
+
+  \[ E[y(t)]=c_0E[w(t)]+c_1E[w(t)]=0 \]
+  
+\noindent Il valore atteso è nullo perché è nullo il valore atteso di $w(t)$. Calcoliamo ora l'autocoovarianza:
+
+  \[ 
+       \gamma_{yy}(\tau)=
+      \left\lbrace
+      \begin{split}
+         (c_0^2+c_1^2)\sigma^2 \quad,\quad \tau=0 \\
+         (c_0c_1)\sigma^2 \quad,\quad \tau=1\\
+         0 \quad,\quad \tau \geq 2
+      \end{split}\right.
+   \]
+
+\noindent La funzione di trasferimento avrà la seguente forma:
+
+  \[ G(z)=c_0+c_1z^{-1}=\frac{c_0z^1+c_1z^0}{z^1} \]
+
+\noindent da cui concludiamo calcolando le densità spettrali in Z ed $\omega$:
+
+  \[ 
+    \begin{split}
+    \Phi_{yy}(z)&=\sigma^2 G(z)G(z^{-1})=\sigma^2 (c_0+c_1z^{-1})(c_0+c_1z)=\\
+    &=\sigma^2 (c_0^2+c_0c_1z+c_0c_1z^{-1}+c_1^2)=\sigma^2 (c_0^2+c_0c_1(z+z^{-1})+c_1^2)\\
+    \Gamma_{yy}(\omega)&=\Phi(e^{j\omega})=\sigma^2 (c_0^2+c_0c_1(e^{j\omega}+e^{-j\omega})+c_1^2)=\\
+    &=\sigma^2 (c_0^2+c_0c_1(\cos(\omega)+j\sin(\omega))+c_0c_1(\cos(\omega)-j\sin(\omega))+c_1^2)=\\
+    &=\sigma^2 (c_0^2+c_1^2+2c_0c_1\cos(\omega))
+    \end{split}
+  \]
+Sappiamo di non aver fatto errori perché la densità spettrale di potenza in $\omega$:
+\begin{itemize}
+   \item è reale $\Gamma_{yy}(\omega)\in \mathbb{R}$
+   \item è definita positiva $\Gamma_{yy}(\omega) \geq 0$
+   \item è pari $\Gamma_{yy}(\omega) =\Gamma_{yy}(-\omega)$
+ \end{itemize}
+$\quad$
+\end{esempio}

@@ -1,0 +1,129 @@
+
+
+\documentclass[a4paper,10pt]{book}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}  % per le sottofigure
+\usepackage{makeidx}
+\usepackage[square,longnamesfirst]{natbib}     % bibliografia
+\usepackage{empheq}
+\usepackage{tikz}       % per i grafici/diagrammi scritti
+\usepackage{hyperref}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+
+\definecolor{MyGray}{rgb}{0.96,0.97,0.98}
+\makeatletter\newenvironment{graybox}{%
+   \begin{lrbox}{\@tempboxa}\begin{minipage}{\columnwidth}}{\end{minipage}\end{lrbox}%
+   \colorbox{MyGray}{\usebox{\@tempboxa}}
+}\makeatother
+
+\newenvironment{esempio}
+{\subsubsection{Esempio}}
+{} 
+
+\newenvironment{dimostrazione}
+{\subsubsection{Dimostrazione}}
+{}
+
+
+
+\makeindex
+
+\title{Identificazione dei modelli ed analisi dei dati}
+\author{Federico Vaga}
+\date{Gennaio 2011}
+\begin{document}
+\maketitle  % stampa titolo e autore
+
+% stampa la licenza CC BY-NC-SA_2.5_IT
+\input{licenza/CreativeCommons/BY-NC-SA_2.5_IT/BY-NC-SA_2.5_IT.tex}
+\begin{center}
+\textbf{Note}
+\end{center}
+Questo lavoro è basato principalmente su una revisione degli appunti \cite{unpub:imadls} raccolti durante il corso \href{http://www-3.unipv.it/ingegneria/didattica/schedacorso1011.php?cod=064050&spec=0}{identificazione dei modelli ed analisi dei dati LS} tenuto dal professor Giuseppe De Nicolao presso l'Università degli studi di Pavia. Il lavoro è inoltre integrato dalla lettura del libro \textit{Identificazione parametrica} \cite{book:identificazioneparametrica}
+
+\tableofcontents % stampa l'indice
+
+\part{Teoria della stima}
+% TEORIA DELLA STIMA
+\chapter{Teoria della stima}
+  % Introduzione
+  \input{teoriadellastima/introduzionestima.tex}
+   % Proprietà degli stimatori
+  \input{teoriadellastima/proprietastimatori.tex}
+  % Stima dei momenti di una variabile casuale: momenti campionari
+  \input{teoriadellastima/momenticampionari.tex}
+
+% CRITERI DI STIMA
+\chapter{Criteri di stima}
+  %massima verosimiglianza
+  \input{criteridistima/massimaverosimiglianza.tex}
+  % stima a posteriori
+  \input{criteridistima/aposteriori.tex}
+  % intervalli di confidenza
+  \input{criteridistima/intervallidiconfidenza.tex}
+
+% IDENTIFICAZIONE DEI MODELLI STATICI
+\chapter{Identificazione dei modelli statici}
+  %introduzione
+  \input{modellistatici/introduzionemodelli.tex}
+  %criteri di stima
+  \input{modellistatici/criteristima.tex}
+  %scelta delle variabili
+  \input{modellistatici/sceltavariabili.tex}
+  %validazione dei modelli
+  \input{modellistatici/validazione.tex}
+  %stimatore blue
+  \input{modellistatici/blue.tex}
+  %stimatore di bayes
+  \input{modellistatici/bayes.tex}
+  %stimatori non lineari nei parametri
+  \input{modellistatici/nonlineareparametri.tex}
+
+% PROCESSI CASUALI
+\chapter{Processi casuali}
+  \input{processicasuali/pcstazionari.tex}
+  \input{processicasuali/leggereautocoovarianza} %FIXME da fare
+  \input{processicasuali/trasformataz.tex}
+  \input{processicasuali/densitaspettrale.tex}
+  \input{processicasuali/interpretaspettroautocoov.tex} %FIXME da fare
+  \input{processicasuali/stimaautocoov.tex}
+  \input{processicasuali/stimaspettro.tex}
+
+% SISTEMI DINAMICI
+\chapter{Sistemi Dinamici}
+  \input{sistemidinamici/sistemidinamici.tex}
+  \input{sistemidinamici/sistemilinstoc.tex}
+  \input{sistemidinamici/MA.tex}
+  \input{sistemidinamici/AR.tex}
+  \input{sistemidinamici/ARMA.tex}
+  \input{sistemidinamici/ARMAX.tex}
+  \input{sistemidinamici/fattorizzazionespettrale}
+  \input{sistemidinamici/predizioneottima.tex}
+  
+
+% imparare a numerare diversamente gli indici di appendice
+\part{Appendici}
+\appendix
+\input{appendici/statistica.tex}
+\input{appendici/operatorimatriciali.tex}
+\input{appendici/retineurali.tex}
+
+
+\part{Indici}
+
+\printindex
+\listoffigures   % stampa indice delle figure
+
+
+
+\bibliography{bibliografia.bib}
+%\bibliographystyle{../natbib_ita/natbib_ita}
+\bibliographystyle{ieeetr}
+%FIXME
+[\textbf{FIXME} non funziona bene la libreria per la bibliografia]
+\end{document}

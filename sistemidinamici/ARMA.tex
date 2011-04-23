@@ -1,0 +1,25 @@
+\section{Processi ARMA}
+I processi AutoRegressive Moving Average $ARMA(n_a,n_c)$ includono elementi sia di MA che di AR, già dalla definizione dell'equazione che descrive il processo è apprezzabile questa caratteristica:
+
+  \[ y(t)=\left[ \sum_{i=1}^{n_a}{a_iy(t-i)}\right]+w(t)+\left[ \sum_{i=1}^{n_c}{c_iw(t-i)}\right], \quad w(t) \sim WN(0,\sigma^2)  \]  
+
+Il processo ARMA è composto da un $AR(n_a)+MA(n_c)$. Sono caratterizzati dalla seguente funzione di trasferimento:
+
+  \[ G(z)=\frac{1+\sum_{i=0}^{n_c}{c_iz^-{i}}}{1-\sum_{i=0}^{n_a}{a_iz^{-i}}}=z^{n_1-n_c}\frac{z^{n_c}+\sum_{i=1}{n_c}{c_iz^{n_c-1}}}{z^{n_a}-\sum_{i=1}^{n_a}{a_iz^{n_a-1}}} \]
+
+Da qui possiamo ricavare le densità spettrali in $z$ ed $\omega$:
+
+  \begin{align*}
+    \Phi_{yy}(z)&=\sigma^2G(z)G(z^{-1})\\
+    \Gamma_{yy}(\omega)&=\Phi_{yy}(e^{j\omega})
+  \end{align*}  
+
+Per il calcolo del valore atteso vale:
+
+  \[ E[y(t)]=G(1)E[w(t)] \]
+  
+mentre per varianza e autocoovarianza occorre calcolarle caso per caso.
+
+\paragraph{Osservazione 1} a seconda della dimensione del sistema vi possono essere poli nell'origine o zeri nell'origine: se$n_a>n_c$ allora vi saranno $n_a-n_c$ poli nell'origine, al contrario, se $n_a<n_c$ vi saranno $n_c-n_a$ zeri nell'origine
+\paragraph{Osservazione 2} I processi di tipo AR e MA sono casi particolari di processi ARMA dove vengono posti a zero, in modo opportuno i coefficienti
+\paragraph{Osservazione 3} La soluzione del processo ARMA non è necessariamente un PC stazionario, ma se tutti i poli del sistema sono in modulo inferiori ad 1, allora la funzione di trasferimento $G(z)$ è stabile e $y(t)$ converge ad un PC stazionario (ergodico) che prende il nome di $ARMA(n_a,n_c)$

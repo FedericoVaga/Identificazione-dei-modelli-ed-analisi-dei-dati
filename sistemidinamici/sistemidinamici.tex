@@ -1,0 +1,104 @@
+\section{Sistemi dinamici lineari invarianti a tempo discreto}
+I sistemi\footnote{oggetto di studio di altri corsi, si consiglia eventualmente di ripassare questi argomenti} che andiamo a considerare godono delle seguenti proprietà:
+\begin{itemize}
+  \item sono lineari\footnote{gli effetti seguono linearmente le cause}
+  \item sono invarianti\footnote{le caratteristiche del processo non variano nel tempo}
+  \item sono a tempo discreto\footnote{osserviamo il comportamento ad intervalli regolari}
+\end{itemize}
+e per questo definiti Sistemi dinamici lineari invarianti a tempo discreto\index{Sistemi dinamici lineari invarianti a tempo discreto}
+\begin{figure}[htbp]\Large
+  \centering
+  \[
+    \begin{CD}
+      u(t) @>>> \framebox{$S$} @>>> y(t)
+    \end{CD}
+  \]
+  \caption{Sistema dinamico \label{fig:sistemadinamico}}
+\end{figure}
+
+\noindent Questi sistemi obbediscono alla seguente relazione\footnote{è la convoluzione discreta fra le cause $u()$ e la funzione di trasferimento $g()$}:
+
+\[ y(t)=\sum_{i=-\infty}^{t}{g(t-i)u(i)}=\sum_{j=0}^{\infty}{g(j)u(t-j)}  \]
+
+Misurando la risposta impulsiva del sistema, vediamo che questa corrisponde alla funzione di trasferimento\index{Funzione di trasferimento} $y(t)=g(t)$ dato che la convoluzione ha un solo termine non nullo in corrispondenza di $u(t)=1,\quad t=0$
+\subsection{Funzione di trasferimento}
+La funzione di trasferimento\index{Funzione di trasferimento} è una funzione che mette in relazione un segnale in ingresso con uno in uscita.
+
+  \begin{figure}[htbp]\Large
+    \centering
+    \[
+      \begin{CD}
+        u(t) @>>> \framebox{$g(t)$} @>>> y(t)
+      \end{CD}
+    \]
+    \caption{Funzione di trasferimento nel tempo \label{fig:funztrasftempo}}
+  \end{figure}
+  
+Nel corso del nostro studio definiamo la funzione di traferimento nel dominio della trasformata Z\index{Trasformata Z}:
+
+  \[ G(z)=Z[g(t)]=\sum_{t=0}^{\infty}{g(t)z^{-t}} \]
+
+Come visto nei capitoli precedenti, operare nel dominio della trasformata Z ci permette di calcolare molto facilmente la convoluzione, infatti risulterà essere:
+
+  \[ Y(z)=G(z)U(z)\]
+
+
+  \begin{figure}[htbp]\Large
+    \centering
+    \[
+      \begin{CD}
+        U(z) @>>> \framebox{$G(z)$} @>>> Y(z)
+      \end{CD}
+    \]
+    \caption{Funzione di trasferimento nel dominio Z \label{fig:funztrasfz}}
+  \end{figure}
+  
+
+Un generico sistema $S$ viene considerato a dimensioni finite\index{Sistema a dimensioni finite}, se la relazione che lega le cause $u(t)$ agli effetti $y(t)$ è esprimibile mediante un'equazione alle differenze:
+
+  \[ y(t)=\sum_{i=1}^{n_a} {a_iy(t-i)}+\sum_{i=0}^{n_b} {b_iu(t-i)} \]
+  
+Se abbiamo a che fare con un sistema a dimensioni finite, allora la funzione di trasferimento $G(z)$ è razionale fratta\index{Funzione di trasferimento razionale fratta}, ovvero una frazione fra polinomi:
+
+  \[ G(z)=\frac{\sum_{i=0}^{n_b} {b_iz^{-i}}}{1-\sum_{i=1}^{n_a} {a_iz^{-i}}}=\frac{N_G(z)}{D_G(z)} \]
+
+da cui possiamo ricavare gli zeri\footnote{tutti i termini che annullano il numeratore} e i poli\footnote{tutti i termini che annullano il denominatore} rispettivamente da $N_G$ e $D_G$. D'ora in avanti considereremo solo sistemi a dimensioni finite, quindi con funzioni di trasferimento razionali fratte.
+
+\begin{esempio}
+  \begin{align*}
+    y(t)&=ay(t-1)+u(t)+bu(t-1)\\
+    Y(z)&=az^{-1}Y(z)+U(z)+bz^{-1}U(z) \Longrightarrow (1-az^{-1})Y(z)=(1+bz^{-1})U(z) \\
+    &\Longrightarrow Y(z)=\frac{1+bz^{-1}}{1-az^{-1}}U(z)=\frac{z+b}{z-a}U(z)=G(z)U(z)
+  \end{align*}
+\end{esempio}
+
+\paragraph{Stabilità} Un generico sistema $S$ è definito stabile (asintotticamente) se:
+  
+  \[ \lim_{t\rightarrow\infty}{g(t)}=0 \]
+
+Questo perché gli effetti dell'impulso si smorzano nel tempo. Nel caso di sitemi a dimensioni finite, essi sono stabili se e solo se $\|a\|<1$, ovvero tutti i poli sono, in modulo, inferiori ad 1.
+
+\begin{esempio}
+  \begin{align*}
+    y(t)&=ay(t-1)+u(t)\\
+    Y(z)&=az^{-1}Y(z)+U(z) \Longrightarrow G(z)=\frac{z}{z-a}\\
+    &\text{polo in }z=a \Longrightarrow G(z) \text{ stabile} \Leftrightarrow \|a\|<1
+  \end{align*}
+\end{esempio}
+
+\paragraph{Guadagno} Il guadagno di un sistema è definito come:
+  
+  \[ \mu=G(1)=\sum_{t=0}^{\infty}g(t) \]
+  
+Supponiamo di avere in ingresso una funzione a scalino unitario $u(t)=sca(t)$ ed un sistema stabile con guadagno finito; in uscita il risultato tenerà asintotticamente al valore del guadagno:
+
+  \[ \lim_{t\rightarrow\infty}{y(t)}=\mu \]
+
+\paragraph{Teorema della risposta in frequenza}\index{Risposta in frequenza} Si consideri un sistema asintotticamente stabile. Sia $u(t)=A\sin(\omega t)$, allora $\lim_{t\rightarrow\infty}{y(t)-\tilde{y}(t)}=0$, ovvero il sistema si stabilizza a $\tilde{y}(t)$, dove:
+
+  \[ \tilde{y}(t)=A|G(e^{j\omega})|\sin(\omega t + \arg[G(e^{j\omega})]) \]
+  
+In altre parole, un ingresso sinosuidale $u(t)$ di pulsazione $\omega$ produce, asintotticamente, un'uscita $y(t)$ con la stessa pulsazione ma ampiezza e fase dipendenti dalla funzione di trasferimento in $G(z)=G(e^{j\omega})$. $G(e^{j\omega})$ è detta risposta in frequenza. Un metodo rapido per intuire la forma del suo modulo $|G(e^{j\omega})|$ è il metodo del "tendone da circo". In pratica, in una rappresentazione 3D, ovunque siano presenti dei poli il modulo della risposta in frequenza tende all'infinito, mentre è uguale a 0 in corrispondenza degli zeri. 
+%FIXME
+[FIXME fare i grafici per il tendone da circo]
+[FIXME è consigliabile quindi preferire le regioni non troppo vicine ai poli, altrimenti il sistema entra in risonanza e vi è una risposta troppo alta, idealmente infinita]

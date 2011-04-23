@@ -1,0 +1,80 @@
+\section{Problema della predizione ottima}
+%FIXME
+Siano dati $x(t)$ e $y(t)$, due PC congiunti ([FIXME con una descrizione di PC congiunti]) con $y(t)$ misurabile. Si consideri, ad esempio, i sequenti casi particolari di predizione. Sia data:
+
+  \begin{align*}
+    y(t)&=x(t)\\
+    y(t)&=x(t)+v(t),\quad v(t) \sim WN
+  \end{align*}
+
+Definiamo con $\hat{x}(t|\tau)$ la stima di $x(t)$ basata su $y(\tau),y(\tau-1),u(\tau-2),...$, ovvero la stima di un valore conoscendo i precedentemente osservati. Questo tipo di stima esistono diversi problemi
+
+\begin{enumerate}
+  \item trovare $\hat{x}(t+k|t)$, ovvero una predizione a $k$ passi in avanti
+  \item trovare $\hat{x}(t|t)$, per operazioni di filtraggio (ha senso solo se $x \neq y$)
+  \item trovare $\hat{x}(t|t+k)$, per operazioni di smoothing (ha senso solo se $x \neq y$). L'operazione può essere utile per pulire il segnale da eventuale rumore
+\end{enumerate}
+Nel nostro studio considereremo il problema di trovare $\hat{x}(t+1|t)$ nel caso in cui $x=y$
+\subsection{Predizione ottima ad un passo}
+Sia data una funzione:
+
+  \[ Y(z)=G(z)U(z)+H(z)W(z), \quad w(t)\sim WN(0,\sigma^2) \]
+
+con $H(z)=\frac{C(z)}{A(z)}$ canonica e $G(z)=z^{-k}\frac{B(z)}{A(z)}$ strettamente propria\footnote{grado del numeratore inferiore a quello del denominatore}. Da questa premessa definiamo predizione ottima ad un passo $\hat{y}(t|t-1)$ la predizione lineare di $y(t)$, basata su $y(t-1)$ e $u(t-1)$ che minimizza $E[(\hat{y}(t|t-1)-y(t))^2]$.\newline
+Considerando $\hat{Y}(z)=Z[\hat{y}(t|t-1)]$, il predittore ottimo ad un passo, per un generico processo ARMAX, è dato da:
+
+  \[ \hat{Y}(z)=\left[ 1-\frac{1}{H(z)} \right]Y(z)+\frac{G(z)}{H(z)}U(z)  \]
+  
+con una varianza dell'errore di predizione pari a $\sigma^2$. La dimostrazione è semplice:
+\begin{dimostrazione}
+  \begin{align*}
+    Y(z)&=G(z)U(z)+H(z)W(z)\\
+    \frac{Y(z)}{H(z)}&=\frac{G(z)U(z)}{H(z)}+\frac{H(z)W(z)}{H(z)}=\frac{G(z)}{H(z)}U(z)+W(z)\\
+    Y(z)+\frac{Y(z)}{H(z)}&=Y(z)+\frac{G(z)}{H(z)}U(z)+W(z)\\
+    Y(z)&=\left[ 1-\frac{1}{H(z)} \right]Y(z)+\frac{G(z)}{H(z)}U(z)+W(z)
+  \end{align*}
+
+Si vede che $\frac{1}{H(z)}=1+\sum_{i=1}^{\infty}{\alpha_i z^{-i}}$ e quindi:
+
+  \[ y(t)=-\sum_{i=1}^{\infty}{\alpha_i y(t-i)} + f(u(t-1),u(t-2),...)+w(t) \]
+
+dato che $w(t)$ è rumore bianco non lo consideriamo\footnote{non possiamo fare altrimenti perché essendo rumore bianco, è per definizione impredicibile}:
+
+   \[ \hat{y}(t)=-\sum_{i=1}^{\infty}{\alpha_i y(t-i)} + f(u(t-1),u(t-2),...) \]
+
+ma allora possiamo anche scrivere
+
+  \[ Y(z)=\left[ 1-\frac{1}{H(z)} \right]Y(z)+\frac{G(z)}{H(z)}U(z) \]
+ \quad
+\end{dimostrazione}
+\subsubsection{Predittore ottimo ad un passo ARMAX}
+  \[ C(z)\hat{Y}(z)=[C(z)-A(z)]Y(z)+z^{-k}B(z)U(z) \]
+  \[ 
+    \begin{split}
+      \hat{y}(t|t-1)=-\sum_{i=1}^{n_c}{c_i\hat{y}(t-i|t-i-1)}+\sum_{i=1}^{\max(n_a,n_c)}{(c_i+a_i)y(t-i)}+\sum_{i=0}^{n_b}{b_iu(t-k-i)}
+    \end{split}
+   \]
+\subsubsection{Predittore ottimo ad un passo ARX}
+  \[ \hat{Y}(z)=[1-A(z)]Y(z)+z^{-k}B(z)U(z) \]
+  \[ 
+    \begin{split}
+      \hat{y}(t|t-1)=\sum_{i=1}^{n_c}{(c_i+a_i)y(t-i)}+\sum_{i=0}^{n_b}{b_iu(t-k-i)}
+    \end{split}
+   \]
+\begin{esempio}
+Sia dato un processo descritto dalla seguente funzione, di cui vogliamo conoscere la predizione ottima ad un passo $y(t|t-1)$:
+  \[y(t)=-0.5y(t-1)+w(t)+0.9w(t-1) \quad w(t)\sim WN(0,\sigma^2)\]
+Osserviamo subito che il processo descritto è di tipo $ARMA(1,1)$ la cui funzione di trasferimento è data da:
+  \[G(z)=\frac{C(z)}{A(z)}=\frac{1+0.9z^{-1}}{1+0.5z^{-1}}\]
+Prima di procedere alla predizione ottima dobbiamo essere certi di avere a disposizione il fattore spettrale canonico. La $G(z)$ che abbiamo calcolato è un fattore spettrale canonico, infatti, poli e zeri hanno modulo minore di 1, numeratore e denominatore sono coprimi, monici e di grado uguale. Essendo un processo $ARMA$, possiamo scrivere:
+  \[\hat{Y}(z)=\frac{C(z)-A(z)}{C(z)}Y(z)=\frac{0.4z^{-1}}{1+0.9z^{-1}}Y(z)\]
+da cui deriva:
+  \[(1+0.9z^{-1})\hat{Y}(z)=0.4z^{-1}Y(z)\]
+trasformanto ora nel dominio del tempo otteniamo:
+  \[
+    \begin{split}
+      \hat{y}(t|t-1)+0.9\hat{y}(t-1|t-2)=0.4y(t-1) \Longrightarrow \\
+      \Longrightarrow \hat{y}(t|t-1)=-0.9\hat{y}(t-1|t-2)+0.4y(t-1) 
+    \end{split}
+  \]
+\end{esempio}

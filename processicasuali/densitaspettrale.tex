@@ -1,0 +1,24 @@
+\section{Densità spettrale di potenza}
+Sia $x(t)$ un processo casuale stazionario, definiamo la sua densità spettrale di potenza\index{Densità spettrale di potenza} come la trasformata di Fourier\index{Trasformata di Forurier} dell'autocovarianza\index{autocovarianza}:
+
+  \[ \Gamma_{xx}(\omega)=F[\gamma_{xx}(t)]=\sum_{\tau=-\infty}^{\infty}{\gamma_{xx}(\tau)e^{-j\omega\tau}} \]
+  
+\noindent spesso si fa anche riferimento alla definizione che fa uso della trasformata Z\index{Trasformata Z} dell'autocovarianza:
+
+  \[ \Phi_{xx}(Z)=Z[\gamma_{xx}(t)]= \sum_{\tau=-\infty}^{\infty}{\gamma_{xx}(\tau)z^{-\tau}} \]
+  
+\subsection{Proprietà}
+\paragraph{Proprietà 1} $\Gamma_{xx}(\omega)$ è sempre reale, $\Gamma_{xx}(\omega) \in \mathbb{R} $
+\paragraph{Proprietà 2} $\Gamma_{xx}(\omega)$ è sempre pari, $\Gamma_{xx}(-\omega)=\Gamma_{xx}(\omega)$
+\paragraph{Proprietà 3} $\Gamma_{xx}(\omega)$ è sempre positiva
+\paragraph{Proprietà 4} $\Gamma_{xx}(\omega)$ è sempre $2\pi$ periodica
+%% grafichetto
+\paragraph{Proprietà 4} $\Gamma_{xx}(\omega)$ ha sempre un'antitrasformata
+
+  \[ \gamma(\tau)=\frac{1}{2\pi}\int_{-\pi}^{\pi}{\Gamma_{xx}(\omega)e^{j\omega\tau}d\omega} \]
+  
+ed inoltre, $\gamma_{xx}(0)=Var[x(t)]$, da qui possiamo calcolare l'integrale:
+
+  \[  \int_{-\pi}^{\pi}{\Gamma_{xx}(\omega)e^{j\omega\tau}d\omega} = 2\pi Var[x(t)]\]
+  
+Da notare che un processo che sottende un'area grande significa che ha una varianza elevata.

@@ -1,0 +1,17 @@
+\section{Stima di Bayes}
+Essendo la stima di Bayes\index{Stima di Bayes} una stima a posteriori, abbiamo conoscenze a priori sui parametri $\theta$, quindi dobbiamo formulare nuove ipotesi:
+
+  \begin{gather*}
+     \exists \quad \text{un modello vero} \quad Y=\Phi\theta+V, \quad V\sim N(0,\Sigma_V) \\
+     \Sigma_V>0,\quad \Theta\sim N(m_\Theta,\Sigma_\Theta),\quad \Sigma_\Theta>0,\quad  V,\Theta \quad \text{indipendenti} 
+  \end{gather*}
+
+\paragraph{Teorema} sotto le ipotesi appena citate, la stima di Bayes corrisponde a:
+  \[ \theta^B=\arg \min_{\theta} \{ \varepsilon^T\Sigma_V^{-1} \varepsilon + (\theta-m_\Theta)^T\Sigma_\Theta^{-1}(\theta-m_\Theta)\} \]
+che ha il suo punto di minimo in corrispondenza di:
+  \[ \theta^B=(\Phi^T\Sigma_V^{-1}\Phi+\Sigma_\Theta^{-1})^{-1}(\Phi^T\Sigma_V^{-1}Y+\Sigma_\Theta^{-1}m_\Theta) \]
+e la sua varianza corrisponde a:
+  \[ Var[\theta^B]=(\Phi^T\Sigma_V^{-1}\Phi+\Sigma_\Theta^{-1})^{-1} \]
+\paragraph{Osservazione 1} $\Sigma_\Theta^{-1} \rightarrow 0 $ allora $\theta^B \rightarrow \theta^{ML}$
+\paragraph{Osservazione 2} non è necessario ipotizzare $rank[\Phi]=q$ perché sappiamo già che $\Sigma_\Theta>0$ e quindi $(\Phi^T\Sigma_V^{-1}\Phi+\Sigma_\Theta^{-1})^{-1}>0$ e quindi è invertibile
+\paragraph{Osservazione 3} sfruttando informazioni a priori è possibile il caso $q>N$

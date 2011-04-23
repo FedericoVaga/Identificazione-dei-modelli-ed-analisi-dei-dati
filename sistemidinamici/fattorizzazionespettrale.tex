@@ -1,0 +1,82 @@
+\section{Fattorizzazione spettrale}
+Ricordiamo che $\Phi_{yy}(z)$ è detta densità spettrale di potenza razionale se esiste $G(z)$ stabile descritto da un rapporto di polinomi tale che $\Phi_{yy}(z)=\sigma^2G(z)G(z^{-1})$. Il problema che ci poniamo ora è di ricostruire a partire da $\Phi_{yy}(z)$ tutti i possibili fattori spettrali $(G(z),\sigma^2)$ tali che $\Phi_{yy}(z)=\sigma^2G(z)G(z^{-1})$. Quello che dobbiamo fare è trovare una stima [\textbf{FIXME} è davvero una stima?] per $\tilde{G}(z)$ e $\tilde{\sigma}^2$ tale che $\Phi_{yy}(z)=\sigma^2G(z)G(z^{-1})=\tilde{\sigma}^2\tilde{G}(z)\tilde{G}(z^{-1})$. Abbiamo tre modi per farlo:
+
+%FIXME leggi appena sopra
+\paragraph{Primo modo}
+Questo metodo è quello che viene usato anche per i processi $MA(n)$:
+  \begin{gather*}
+    \tilde{G}(z)=\frac{G(z)}{\alpha} \quad \tilde{\sigma}^2=\alpha^2\sigma^2 \\
+    \Phi_{\tilde{y}\tilde{y}}(z)=\tilde{\sigma}^2\tilde{G}(z)\tilde{G}(z^{-1})=\alpha^2\sigma^2\frac{G(z)}{\alpha}\frac{G(z^{-1})}{\alpha}=\Phi_{yy}(z)
+  \end{gather*}
+  
+\paragraph{Secondo modo}
+Quello che facciamo in questo metodo è introdurre una traslazione temporale, che su PC stazionari non comporta alcuna modifica al sistema:
+  \begin{gather*}
+    \tilde{G}(z)=z^{-k}G(z), \quad \tilde{\sigma}^2=\sigma^2\\
+    \Phi_{\tilde{y}\tilde{y}}(z)=\tilde{\sigma}^2\tilde{G}(z)\tilde{G}(z^{-1})=\sigma^2z^{-k}G(z)z^kg(z^{-1})=\Phi_{yy}(z)
+  \end{gather*}
+\paragraph{Terzo modo}
+Il terzo metodo consiste nell'utilizzo di un filtro passa tutto $T(z)$ che per definizione non cambia lo stato del sistema in quanto non filtra niente:
+  \begin{gather*}
+    \tilde{G}(z)=G(z)T(z),\quad \tilde{\sigma}^2=\sigma^2,\quad T(z)=\frac{1}{\alpha}\frac{z+\alpha}{z+\frac{1}{\alpha}},\quad T(z)T(z^{-1})=1\\
+    \Phi_{\tilde{y}\tilde{y}}(z)=\tilde{\sigma}^2\tilde{G}(z)\tilde{G}(z^{-1})=\sigma^2G(z)T(z)G(z^{-1})T(z^{-1})=\sigma^2G(z)G(z^{-1})
+  \end{gather*}
+  
+  \begin{figure}[htbp]\Large
+  \centering
+  \[
+    \begin{CD}
+        WN @>>> \framebox{$G(z)$} @>y>> \framebox{$T(z)$} @>>> y(t)
+    \end{CD}
+  \]
+  \caption{Sistema dinamico con filtro passa tutto $T(z)$ \label{fig:spettcan3}}
+\end{figure}
+  
+Abbiamo visto tre modi differenti per costruire gli infiniti fattori spettrali, ma l'ideale sarebbe trovare un metodo che restituisca un unico risultato.
+\paragraph{Teorema} Dato un PC stazionario a spettro razionale ergodico, esiste un'unica fattorizzazione $(\hat{G}(z),\hat{\sigma}^2)$ tale che:
+\begin{itemize}
+  \item $N_{\hat{G}(z)}$ e $D_{\hat{G}(z)}$ sono coprimi (non hanno radici in comune, ovvero nessun polo coincide con uno zero e viceversa), monici (il coefficiente della potenza di grado massimo è 1), e di uguale grado
+  \item $N_{\hat{G}(z)}$ ha zeri con modulo minore o uguale a 1
+  \item $D_{\hat{G}(z)}$ ha poli con modulo minore di 1
+\end{itemize}
+Un fattore spettrale che rispetta queste caratteristiche è unico ed è detto canonico.
+
+\begin{center} \rule{300pt}{1pt} \end{center}
+\begin{esempio} %###########
+Siano dati la varianza e la funzione di trasferimento:
+
+\begin{align*}
+  G(z)&=\frac{10(z+2)}{(z+0.3)(z+0.1)}\\
+  \sigma^2&=1  
+\end{align*}
+
+Dato questo fattore spettrale, vogliamo ricavare il fattore spettrale canonico mediante operazioni che non alterino $\Phi_{yy}(z)$. Per prima cosa dobbiamo chiederci se abbiamo già il fattore spettrale canonico; in questo caso la risposta è negativa perché $G(z)$:
+\begin{itemize}
+   \item ha uno zero con modulo maggiore di 1 $z_1=-2$
+   \item il gradi di numeratore e denominatore sono diversi
+   \item non è monico, il numeratore ha un coefficiente maggiore di uno
+ \end{itemize} 
+Ora che sappiamo non avere a disposizione il fattore spettrale canonica, calcoliamolo usando i metodi precedentemente esposti che ci permettono di far variare $G(z)$ lasciando inalterata $\Phi_{yy}(z)$. Iniziamo aggiungengo uno zero nell'origine:
+
+\begin{align*}
+  G(z)&=\frac{10z(z+2)}{(z+0.3)(z+0.1)}\\
+  \sigma^2&=1  
+\end{align*}
+
+Moltiplichiamo la funzione di trasferimento con un filtro passatutto $T(z)=\frac{2(z+0.5)}{(z+2)}$:
+
+\begin{align*}
+  G(z)&=\frac{20z(z+0.5)}{(z+0.3)(z+0.1)}\\
+  \sigma^2&=1  
+\end{align*}
+
+Dividiamo la funzione di trasferimento per $20$ ricordando di moltiplicare la varianza per $20^2$:
+
+\begin{align*}
+  \hat{G}(z)&=\frac{z(z+0.5)}{(z+0.3)(z+0.1)}\\
+  \hat{\sigma}^2&=400  
+\end{align*}
+
+Abbiamo ottenuto il fattore spettrale canonico mantenendo ma $\Phi_{yy}(z)$
+\end{esempio}
+\begin{center} \rule{300pt}{1pt} \end{center}

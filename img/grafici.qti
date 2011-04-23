@@ -1,0 +1,2439 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	17
+<table>
+Draw1	30	2	31/12/10 01:45
+geometry	982	0	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	7.08661417322800e-02	8.53591160221000e-01
+1	4.25196850393700e-01	7.95580110497200e-01
+2	2.83464566929100e-01	6.98895027624300e-01
+3	5.43307086614200e-01	6.46408839779000e-01
+4	4.60629921259800e-01	5.82872928176800e-01
+5	6.14173228346500e-01	4.39226519337000e-01
+6	1.20472440944900e+00	4.28176795580100e-01
+7	1.12204724409400e+00	2.79005524861900e-01
+8	1.42913385826800e+00	2.70718232044200e-01
+9	1.42913385826800e+00	1.82320441989000e-01
+10	1.93700787401600e+00	1.85082872928200e-01
+11	2.14960629921300e+00	8.28729281768000e-02
+12	2.56299212598400e+00	4.69613259668500e-02
+13	2.95275590551200e+00	2.48618784530400e-02
+14	3.35433070866100e+00	5.80110497237600e-02
+15	3.81496062992100e+00	1.10497237569100e-02
+16	4.31102362204700e+00	3.59116022099400e-02
+17	4.31102362204700e+00	3.59116022099400e-02
+</data>
+</table>
+<table>
+Draw2	30	2	31/12/10 02:04
+geometry	982	0	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	-5.16602316602300e+01	-8.11827956989200e+01
+1	-4.59266409266400e+01	-6.77419354838700e+01
+2	-4.81853281853300e+01	8.06451612903200e-01
+3	-4.01930501930500e+01	1.12365591397800e+02
+4	-3.42857142857100e+01	5.99462365591400e+01
+5	-3.01158301158300e+01	1.45967741935500e+02
+6	-2.29922779922800e+01	1.23118279569900e+02
+7	-1.72586872586900e+01	8.01075268817200e+01
+8	-1.08301158301200e+01	3.49462365591400e+00
+9	-3.18532818532800e+00	3.30645161290300e+01
+10	4.11196911196900e+00	-9.94623655914000e+00
+11	9.67181467181500e+00	1.55376344086000e+02
+12	1.29729729729700e+01	6.53225806451600e+01
+13	1.85328185328200e+01	2.23924731182800e+02
+14	1.73166023166000e+01	3.09946236559100e+02
+</data>
+</table>
+<table>
+Draw3	30	2	24/01/11 12:02
+geometry	0	0	1920	658	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	1.00000000000000e+00	0.00000000000000e+00
+1	2.00000000000000e+00	0.00000000000000e+00
+2	3.00000000000000e+00	0.00000000000000e+00
+3	4.00000000000000e+00	0.00000000000000e+00
+4	5.00000000000000e+00	0.00000000000000e+00
+5	6.00000000000000e+00	1.00000000000000e+00
+6	7.00000000000000e+00	1.00000000000000e+00
+7	8.00000000000000e+00	1.00000000000000e+00
+8	9.00000000000000e+00	1.00000000000000e+00
+9	1.00000000000000e+01	1.00000000000000e+00
+10	1.10000000000000e+01	1.00000000000000e+00
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	26/12/10 23:59
+geometry	100	221	718	472	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	728	313
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	695	396
+PlotTitle	1	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	0	0	1	0	
+AxesTitles	 	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	5124	4
+AxesTitleDistance	-1	-1	2	-1
+TitleFont	Sans	11	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F1</Title>
+<Expression>gauss_pdf(x,1.5)</Expression>
+<Variable>x</Variable>
+<Range>-4	4</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#8000ff</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>F2</Title>
+<Expression>gauss_pdf(x,1)</Expression>
+<Variable>x</Variable>
+<Range>-4	4</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>F3</Title>
+<Expression>gauss_pdf(x,0.7)</Expression>
+<Variable>x</Variable>
+<Range>-4	4</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#00ff00</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>F4</Title>
+<Expression>gauss_pdf(x,0.5)</Expression>
+<Variable>x</Variable>
+<Range>-4	4</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#0000ff</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>F5</Title>
+<Expression>if(x=0,1,0)</Expression>
+<Variable>x</Variable>
+<Range>-3	3</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	1	0	7	5	0	0
+scale	1	0	1	0	8	5	0	0
+scale	2	-4	4	0	8	5	0	0
+scale	3	-4	4	0	7	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<line>	0	0	0	1	1.9	#000000	SolidLine	1	0	4	45	1	1</line>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-3.31330472103</x>
+<y>0.89106145251397</y>
+<right>-2.73623188405797</right>
+<bottom>0.891666666666667</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(5)N → ∞
+\l(4) N<sub>4</sub> > N<sub>3</sub>
+\l(3) N<sub>3</sub> > N<sub>2</sub>
+\l(2) N<sub>2</sub> > N<sub>1</sub>
+\l(1) N<sub>1</sub>
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.13161659513591</x>
+<y>-0.033519553072626</y>
+<right>0.234620886981402</right>
+<bottom>-0.106145251396648</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\theta^0</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"21 19 16 1",
+"g c #000000",
+"j c #101010",
+"e c #222222",
+"m c #323232",
+"n c #444444",
+"a c #545454",
+"f c #666666",
+"c c #767676",
+"b c #888888",
+"k c #989898",
+"l c #aaaaaa",
+"i c #bababa",
+"# c #cccccc",
+"d c #dcdcdc",
+"h c #eeeeee",
+". c #ffffff",
+"..............#abcc..",
+".............de...bc.",
+".............ff...dgh",
+".....hfca#...eb....gi",
+"....ded.#j...gb....gk",
+"...hjl...gi..gb....gb",
+"...am....gb..gb....gk",
+"..#gl...dgc..ec....gi",
+"..ag....lgb..ff...dgh",
+".hga....cgl..djh..cf.",
+".kgjmmmmjgd...#fbcc..",
+".agd...hgj...........",
+".ej....lgf...........",
+".gn....ag#...........",
+".gf....gn............",
+".jc...kgd............",
+".mf...jb.............",
+".kn..af..............",
+"..ffak..............."};
+</xpm>
+</TexFormula>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	27/12/10 00:31
+geometry	1009	263	716	420	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	7	693	348
+PlotTitle	 	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	0	0	1	0	
+AxesTitles	 	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	5124	4
+AxesTitleDistance	-1	-1	2	-1
+TitleFont	Sans	14	75	0	0	0
+ScaleFont0	Sans	11	75	0	0	0
+ScaleFont1	Sans	11	75	0	0	0
+ScaleFont2	Sans	11	75	0	0	0
+ScaleFont3	Sans	11	75	0	0	0
+AxisFont0	Sans	11	50	0	0	0
+AxisFont1	Sans	11	50	0	0	0
+AxisFont2	Sans	11	50	0	0	0
+AxisFont3	Sans	11	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F2</Title>
+<Expression>gauss_pdf(x,0.7)</Expression>
+<Variable>x</Variable>
+<Range>-5	3</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>F3</Title>
+<Expression>gauss_pdf(x+2,0.7)</Expression>
+<Variable>x</Variable>
+<Range>-5	3</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#00ff00</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	0.6	0	8	5	0	0
+scale	1	0	0.6	0	8	5	0	0
+scale	2	-5	3	0	4	5	0	0
+scale	3	-5	3	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<line>	0	0	0	0.56	1	#000000	DashLine	0	0	4	45	1	1</line>
+<line>	-2	0	-2	0.56	1	#000000	DashLine	0	0	4	45	1	1</line>
+<line>	-1.96	0.280936	0	0.280936	1	#000000	SolidLine	1	1	2	45	1	1</line>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-4.6763005780347</x>
+<y>0.59213973799127</y>
+<right>-3.73988439306358</right>
+<bottom>0.514909090909091</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1) 
+\l(2) 
+</Text>
+<Font>Sans	27	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>1</TeXOutput>
+</Legend>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.190332</x>
+<y>-0.0280936</y>
+<right>0.179190751445087</right>
+<bottom>-0.0668122270742358</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\theta^0</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"21 19 16 1",
+"g c #000000",
+"j c #101010",
+"e c #222222",
+"m c #323232",
+"n c #444444",
+"a c #545454",
+"f c #666666",
+"c c #767676",
+"b c #888888",
+"k c #989898",
+"l c #aaaaaa",
+"i c #bababa",
+"# c #cccccc",
+"d c #dcdcdc",
+"h c #eeeeee",
+". c #ffffff",
+"..............#abcc..",
+".............de...bc.",
+".............ff...dgh",
+".....hfca#...eb....gi",
+"....ded.#j...gb....gk",
+"...hjl...gi..gb....gb",
+"...am....gb..gb....gk",
+"..#gl...dgc..ec....gi",
+"..ag....lgb..ff...dgh",
+".hga....cgl..djh..cf.",
+".kgjmmmmjgd...#fbcc..",
+".agd...hgj...........",
+".ej....lgf...........",
+".gn....ag#...........",
+".gf....gn............",
+".jc...kgd............",
+".mf...jb.............",
+".kn..af..............",
+"..ffak..............."};
+</xpm>
+</TexFormula>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-4.3179190751445</x>
+<y>0.49519650655022</y>
+<right>-3.87861271676301</right>
+<bottom>0.446724890829694</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>f_{\hat{\theta}_2}</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"27 26 16 1",
+"f c #000000",
+"i c #101010",
+"e c #222222",
+"l c #323232",
+"d c #444444",
+"c c #545454",
+"# c #666666",
+"a c #767676",
+"h c #888888",
+"b c #989898",
+"n c #aaaaaa",
+"m c #bababa",
+"j c #cccccc",
+"k c #dcdcdc",
+"g c #eeeeee",
+". c #ffffff",
+".........##ab..............",
+"........cd.ef..............",
+".......gfhgic..............",
+".......bfj.................",
+".......cf..................",
+".......ee..................",
+"....jddfiddj...............",
+"......jfb..................",
+"......hfj.......klm........",
+"......cf.......jckab.......",
+"......el.......k...k.......",
+".....gf#...................",
+".....mfn...................",
+".....hfk.......ha#m........",
+".....di.......cb.ge........",
+".....ic......bl...fk.......",
+"....kfn......im..kfj.......",
+"....bi......bf...nfg.......",
+".lfglb......de###ei..kaaccg",
+".#fcb.......ih...e#..lg..al",
+"............fm..jfk..im..mf",
+"............fj..c#.......#c",
+"............cm.ml.......bd.",
+"............kch#.......hb.k",
+"......................amgg#",
+".....................lffffd"};
+</xpm>
+</TexFormula>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-4.33535</x>
+<y>0.58194</y>
+<right>-3.876135</right>
+<bottom>0.57374088</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>f_{\hat{\theta}_1}</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"27 26 16 1",
+"f c #000000",
+"i c #101010",
+"e c #222222",
+"l c #323232",
+"d c #444444",
+"c c #545454",
+"# c #666666",
+"a c #767676",
+"h c #888888",
+"b c #989898",
+"n c #aaaaaa",
+"m c #bababa",
+"j c #cccccc",
+"k c #dcdcdc",
+"g c #eeeeee",
+". c #ffffff",
+".........##ab..............",
+"........cd.ef..............",
+".......gfhgic..............",
+".......bfj.................",
+".......cf..................",
+".......ee..................",
+"....jddfiddj...............",
+"......jfb..................",
+"......hfj.......klm........",
+"......cf.......jckab.......",
+"......el.......k...k.......",
+".....gf#...................",
+".....mfn...................",
+".....hfk.......ha#m........",
+".....di.......cb.ge........",
+".....ic......bl...fk.......",
+"....kfn......im..kfj.......",
+"....bi......bf...nfg.......",
+".lfglb......de###ei....me..",
+".#fcb.......ih...e#...hbf..",
+"............fm..jfk....gf..",
+"............fj..c#.....gf..",
+"............cm.ml......gf..",
+"............kch#.......gf..",
+".......................gf..",
+"......................h#f#b"};
+</xpm>
+</TexFormula>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-4.3208092485549</x>
+<y>0.57401746724891</y>
+<right>-3.87861271676301</right>
+<bottom>0.525327510917031</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>f_{\hat{\theta}_1}</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"27 26 16 1",
+"f c #000000",
+"i c #101010",
+"e c #222222",
+"l c #323232",
+"d c #444444",
+"c c #545454",
+"# c #666666",
+"a c #767676",
+"h c #888888",
+"b c #989898",
+"n c #aaaaaa",
+"m c #bababa",
+"j c #cccccc",
+"k c #dcdcdc",
+"g c #eeeeee",
+". c #ffffff",
+".........##ab..............",
+"........cd.ef..............",
+".......gfhgic..............",
+".......bfj.................",
+".......cf..................",
+".......ee..................",
+"....jddfiddj...............",
+"......jfb..................",
+"......hfj.......klm........",
+"......cf.......jckab.......",
+"......el.......k...k.......",
+".....gf#...................",
+".....mfn...................",
+".....hfk.......ha#m........",
+".....di.......cb.ge........",
+".....ic......bl...fk.......",
+"....kfn......im..kfj.......",
+"....bi......bf...nfg.......",
+".lfglb......de###ei....me..",
+".#fcb.......ih...e#...hbf..",
+"............fm..jfk....gf..",
+"............fj..c#.....gf..",
+"............cm.ml......gf..",
+"............kch#.......gf..",
+".......................gf..",
+"......................h#f#b"};
+</xpm>
+</TexFormula>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-1.3236994219653</x>
+<y>0.33284671532847</y>
+<right>-3.73988439306358</right>
+<bottom>0.514909090909091</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+BIAS
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph3	1	1	27/12/10 01:20
+geometry	298	147	715	460	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	9	692	385
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	0	0	1	0	
+AxesTitles	 	%(?Y)			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	5124	4
+AxesTitleDistance	-1	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F1</Title>
+<Expression>gauss_pdf(x,2)</Expression>
+<Variable>x</Variable>
+<Range>-5	5</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#00ff00</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>F2</Title>
+<Expression>gauss_pdf(x-1,0.5)</Expression>
+<Variable>x</Variable>
+<Range>-5	5</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	1	0	7	5	0	0
+scale	1	-0.2	1	0	8	5	0	0
+scale	2	-5	5	0	7	5	0	0
+scale	3	-5	5	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	0	1
+<line>	1	0	1	0.9	1	#000000	DashLine	0	0	4	45	1	1</line>
+<line>	0	0	0	0.9	1	#000000	DashLine	0	0	4	45	1	1</line>
+<line>	0	0.309037900874636	0.965250965250966	0.309037900874636	1	#000000	SolidLine	1	1	4	45	1	1</line>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-3.4555984555985</x>
+<y>0.88921282798834</y>
+<right>-3.43390804597701</right>
+<bottom>0.886297376093294</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1)
+\l(2)
+</Text>
+<Font>Sans	21	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-2.7792</x>
+<y>0.874636</y>
+<right>-2.049805</right>
+<bottom>0.767381</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>f_{\hat{\theta}_1}</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"27 26 16 1",
+"f c #000000",
+"i c #101010",
+"e c #222222",
+"l c #323232",
+"d c #444444",
+"c c #545454",
+"# c #666666",
+"a c #767676",
+"h c #888888",
+"b c #989898",
+"n c #aaaaaa",
+"m c #bababa",
+"j c #cccccc",
+"k c #dcdcdc",
+"g c #eeeeee",
+". c #ffffff",
+".........##ab..............",
+"........cd.ef..............",
+".......gfhgic..............",
+".......bfj.................",
+".......cf..................",
+".......ee..................",
+"....jddfiddj...............",
+"......jfb..................",
+"......hfj.......klm........",
+"......cf.......jckab.......",
+"......el.......k...k.......",
+".....gf#...................",
+".....mfn...................",
+".....hfk.......ha#m........",
+".....di.......cb.ge........",
+".....ic......bl...fk.......",
+"....kfn......im..kfj.......",
+"....bi......bf...nfg.......",
+".lfglb......de###ei....me..",
+".#fcb.......ih...e#...hbf..",
+"............fm..jfk....gf..",
+"............fj..c#.....gf..",
+"............cm.ml......gf..",
+"............kch#.......gf..",
+".......................gf..",
+"......................h#f#b"};
+</xpm>
+</TexFormula>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-2.7799227799228</x>
+<y>0.77551020408163</y>
+<right>-2.04633204633205</right>
+<bottom>0.661807580174927</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>f_{\hat{\theta}_2}</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"27 26 16 1",
+"f c #000000",
+"i c #101010",
+"e c #222222",
+"l c #323232",
+"d c #444444",
+"c c #545454",
+"# c #666666",
+"a c #767676",
+"h c #888888",
+"b c #989898",
+"n c #aaaaaa",
+"m c #bababa",
+"j c #cccccc",
+"k c #dcdcdc",
+"g c #eeeeee",
+". c #ffffff",
+".........##ab..............",
+"........cd.ef..............",
+".......gfhgic..............",
+".......bfj.................",
+".......cf..................",
+".......ee..................",
+"....jddfiddj...............",
+"......jfb..................",
+"......hfj.......klm........",
+"......cf.......jckab.......",
+"......el.......k...k.......",
+".....gf#...................",
+".....mfn...................",
+".....hfk.......ha#m........",
+".....di.......cb.ge........",
+".....ic......bl...fk.......",
+"....kfn......im..kfj.......",
+"....bi......bf...nfg.......",
+".lfglb......de###ei..kaaccg",
+".#fcb.......ih...e#..lg..al",
+"............fm..jfk..im..mf",
+"............fj..c#.......#c",
+"............cm.ml.......bd.",
+"............kch#.......hb.k",
+"......................amgg#",
+".....................lffffd"};
+</xpm>
+</TexFormula>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.057915057915058</x>
+<y>0.37900874635569</y>
+<right>-3.43390804597701</right>
+<bottom>0.886297376093294</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+BIAS
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.28957528957529</x>
+<y>-0.017492711370262</y>
+<right>0.328185328185328</right>
+<bottom>-0.0962099125364431</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\theta^0</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"21 19 16 1",
+"g c #000000",
+"j c #101010",
+"e c #222222",
+"m c #323232",
+"n c #444444",
+"a c #545454",
+"f c #666666",
+"c c #767676",
+"b c #888888",
+"k c #989898",
+"l c #aaaaaa",
+"i c #bababa",
+"# c #cccccc",
+"d c #dcdcdc",
+"h c #eeeeee",
+". c #ffffff",
+"..............#abcc..",
+".............de...bc.",
+".............ff...dgh",
+".....hfca#...eb....gi",
+"....ded.#j...gb....gk",
+"...hjl...gi..gb....gb",
+"...am....gb..gb....gk",
+"..#gl...dgc..ec....gi",
+"..ag....lgb..ff...dgh",
+".hga....cgl..djh..cf.",
+".kgjmmmmjgd...#fbcc..",
+".agd...hgj...........",
+".ej....lgf...........",
+".gn....ag#...........",
+".gf....gn............",
+".jc...kgd............",
+".mf...jb.............",
+".kn..af..............",
+"..ffak..............."};
+</xpm>
+</TexFormula>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph4	1	1	27/12/10 01:31
+geometry	445	0	537	460	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	6	5	514	397
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	 θ	L			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F1</Title>
+<Expression>x^2*(1-x)^2</Expression>
+<Variable>x</Variable>
+<Range>0	1</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	0.1	0.1	3	4	0	0
+scale	1	0	0.1	0.1	8	5	0	0
+scale	2	0	1	1	2	5	0	0
+scale	3	0	1	1	8	5	0	0
+LabelsFormat	0	4	0	4	0	0	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph5	2	2	27/12/10 01:42
+geometry	467	1	1061	862	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	492	395
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Grafico 1	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F2</Title>
+<Expression>1/(b-a)</Expression>
+<Variable>x</Variable>
+<Range>0	1</Range>
+<Points>100</Points>
+<Constant>a	1</Constant>
+<Constant>b	3</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0.2	0.8	1	7	5	0	0
+scale	1	0.2	0.8	1	8	5	0	0
+scale	2	-0.2	1.2	1	3	5	0	0
+scale	3	-0.2	1.2	1	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>1.1755991285403</x>
+<y>0.19650145772595</y>
+<right>1.24270152505447</right>
+<bottom>0.149271137026239</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\theta</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"11 16 16 1",
+"i c #000000",
+"g c #101010",
+"f c #222222",
+"k c #323232",
+"n c #444444",
+"c c #545454",
+"a c #666666",
+"b c #767676",
+"l c #888888",
+"m c #989898",
+"h c #aaaaaa",
+"j c #bababa",
+"d c #cccccc",
+"e c #dcdcdc",
+"# c #eeeeee",
+". c #ffffff",
+".....#abcd.",
+"....efe.dg.",
+"...#gh...ij",
+"...ck....il",
+"..dih...eib",
+"..ci....hil",
+".#ic....bih",
+".migkkkkgie",
+".cie...#ig.",
+".fg....hia.",
+".in....cid.",
+".ia....in..",
+".gb...mie..",
+".ka...gl...",
+".mn..ca....",
+"..aacm....."};
+</xpm>
+</TexFormula>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.041394335511983</x>
+<y>0.17900874635569</y>
+<right>0.132461873638344</right>
+<bottom>0.731778425655977</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+a
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.95904139433551</x>
+<y>0.17725947521866</y>
+<right>0.132461873638344</right>
+<bottom>0.731778425655977</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+b
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<graph>
+ggeometry	502	5	500	395
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Grafico 2	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F2</Title>
+<Expression>gauss_pdf(x,0.7)</Expression>
+<Variable>x</Variable>
+<Range>-3	3</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>F3</Title>
+<Expression>gauss_pdf(x,1)</Expression>
+<Variable>x</Variable>
+<Range>-3	3</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#00ff00</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	0.6	1	7	5	0	0
+scale	1	0	0.6	1	8	5	0	0
+scale	2	-3	3	5	9	5	0	0
+scale	3	-3	3	5	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<line>	0	0	0	0.56	1	#000000	DashLine	0	0	4	45	1	1</line>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.1220556745182</x>
+<y>0.63148688046647</y>
+<right>0.160599571734475</right>
+<bottom>0.573760932944606</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\hat{\theta}</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"11 22 16 1",
+"l c #000000",
+"j c #101010",
+"i c #222222",
+"m c #323232",
+"c c #444444",
+"g c #545454",
+"# c #666666",
+"b c #767676",
+"n c #888888",
+"a c #989898",
+"k c #aaaaaa",
+"e c #bababa",
+"d c #cccccc",
+"h c #dcdcdc",
+"f c #eeeeee",
+". c #ffffff",
+".......#a..",
+"......#bca.",
+".....#a..#a",
+".....d....e",
+"...........",
+"...........",
+".....f#bgd.",
+"....hih.dj.",
+"...fjk...le",
+"...gm....ln",
+"..dlk...hlb",
+"..gl....kln",
+".flg....blk",
+".aljmmmmjlh",
+".glh...flj.",
+".ij....kl#.",
+".lc....gld.",
+".l#....lc..",
+".jb...alh..",
+".m#...jn...",
+".ac..g#....",
+"..##ga....."};
+</xpm>
+</TexFormula>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>3.0385438972163</x>
+<y>0.0017492711370262</y>
+<right>3.32119914346895</right>
+<bottom>-0.0454810495626822</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\theta</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"11 16 16 1",
+"i c #000000",
+"g c #101010",
+"f c #222222",
+"k c #323232",
+"n c #444444",
+"c c #545454",
+"a c #666666",
+"b c #767676",
+"l c #888888",
+"m c #989898",
+"h c #aaaaaa",
+"j c #bababa",
+"d c #cccccc",
+"e c #dcdcdc",
+"# c #eeeeee",
+". c #ffffff",
+".....#abcd.",
+"....efe.dg.",
+"...#gh...ij",
+"...ck....il",
+"..dih...eib",
+"..ci....hil",
+".#ic....bih",
+".migkkkkgie",
+".cie...#ig.",
+".fg....hia.",
+".in....cid.",
+".ia....in..",
+".gb...mie..",
+".ka...gl...",
+".mn..ca....",
+"..aacm....."};
+</xpm>
+</TexFormula>
+</graph>
+<graph>
+ggeometry	5	405	493	395
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Grafico 3	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+scale	0	0	1	0	1	5	0	0
+scale	1	0	1	0	8	5	0	0
+scale	2	0	1	0	8	0	0	0
+scale	3	0	1	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<line>	0.4	0	0.4	0.7	1	#ff0000	SolidLine	1	0	4	45	1	1</line>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.37832310838446</x>
+<y>0.80758017492711</y>
+<right>0.423312883435583</right>
+<bottom>0.711370262390671</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\hat{\theta}</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"11 22 16 1",
+"l c #000000",
+"j c #101010",
+"i c #222222",
+"m c #323232",
+"c c #444444",
+"g c #545454",
+"# c #666666",
+"b c #767676",
+"n c #888888",
+"a c #989898",
+"k c #aaaaaa",
+"e c #bababa",
+"d c #cccccc",
+"h c #dcdcdc",
+"f c #eeeeee",
+". c #ffffff",
+".......#a..",
+"......#bca.",
+".....#a..#a",
+".....d....e",
+"...........",
+"...........",
+".....f#bgd.",
+"....hih.dj.",
+"...fjk...le",
+"...gm....ln",
+"..dlk...hlb",
+"..gl....kln",
+".flg....blk",
+".aljmmmmjlh",
+".glh...flj.",
+".ij....kl#.",
+".lc....gld.",
+".l#....lc..",
+".jb...alh..",
+".m#...jn...",
+".ac..g#....",
+"..##ga....."};
+</xpm>
+</TexFormula>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.99130434782609</x>
+<y>-0.0087463556851312</y>
+<right>1.03913043478261</right>
+<bottom>-0.0874635568513119</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\theta</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"11 16 16 1",
+"i c #000000",
+"g c #101010",
+"f c #222222",
+"k c #323232",
+"n c #444444",
+"c c #545454",
+"a c #666666",
+"b c #767676",
+"l c #888888",
+"m c #989898",
+"h c #aaaaaa",
+"j c #bababa",
+"d c #cccccc",
+"e c #dcdcdc",
+"# c #eeeeee",
+". c #ffffff",
+".....#abcd.",
+"....efe.dg.",
+"...#gh...ij",
+"...ck....il",
+"..dih...eib",
+"..ci....hil",
+".#ic....bih",
+".migkkkkgie",
+".cie...#ig.",
+".fg....hia.",
+".in....cid.",
+".ia....in..",
+".gb...mie..",
+".ka...gl...",
+".mn..ca....",
+"..aacm....."};
+</xpm>
+</TexFormula>
+</graph>
+<graph>
+ggeometry	501	404	522	395
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Grafico 4	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F1</Title>
+<Expression>exp(x)^(-1)</Expression>
+<Variable>x</Variable>
+<Range>0	4.6</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	1.2	2	7	9	0	0
+scale	1	0	1.2	2	8	5	0	0
+scale	2	0	4.6	5	2	5	0	0
+scale	3	0	4.6	5	1	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>4.5341513292434</x>
+<y>-0.0034985422740525</y>
+<right>4.74110429447853</right>
+<bottom>-0.0979591836734694</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>\theta</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"11 16 16 1",
+"i c #000000",
+"g c #101010",
+"f c #222222",
+"k c #323232",
+"n c #444444",
+"c c #545454",
+"a c #666666",
+"b c #767676",
+"l c #888888",
+"m c #989898",
+"h c #aaaaaa",
+"j c #bababa",
+"d c #cccccc",
+"e c #dcdcdc",
+"# c #eeeeee",
+". c #ffffff",
+".....#abcd.",
+"....efe.dg.",
+"...#gh...ij",
+"...ck....il",
+"..dih...eib",
+"..ci....hil",
+".#ic....bih",
+".migkkkkgie",
+".cie...#ig.",
+".fg....hia.",
+".in....cid.",
+".ia....in..",
+".gb...mie..",
+".ka...gl...",
+".mn..ca....",
+"..aacm....."};
+</xpm>
+</TexFormula>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph6	1	1	31/12/10 01:43
+geometry	445	0	537	460	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	514	397
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles					
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F1</Title>
+<Expression>exp(-x)</Expression>
+<Variable>x</Variable>
+<Range>0	5</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+curve	Draw1_1	Draw1_2	1	0	#000000	0	1	7	10	#0000ff	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	0	1	10	6	1	0	0
+scale	1	0	1	10	8	5	0	0
+scale	2	0	6	0	8	5	0	0
+scale	3	0	6	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<line>	1.24015748031496	0.417127071823204	1.24015748031496	0.417127071823204	1	#000000	SolidLine	0	0	4	45	1	1</line>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.82677165354331</x>
+<y>0.89502762430939</y>
+<right>1.2950495049505</right>
+<bottom>0.892265193370166</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1)
+\l(2) campioni
+</Text>
+<Font>Sans	13	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<TexFormula>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>1.4291338582677</x>
+<y>0.90883977900552</y>
+<right>2.05511811023622</right>
+<bottom>0.812154696132597</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<tex>C(t)</tex>
+<xpm>
+/* XPM */
+static char *dummy[]={
+"42 24 16 1",
+"l c #000000",
+"j c #101010",
+"n c #222222",
+"e c #323232",
+"b c #444444",
+"c c #545454",
+"i c #666666",
+"f c #767676",
+"d c #888888",
+"h c #989898",
+"g c #aaaaaa",
+"m c #bababa",
+"k c #cccccc",
+"a c #dcdcdc",
+"# c #eeeeee",
+". c #ffffff",
+"........................#a..........a#....",
+".......................ab............ca...",
+".......adeebbf..gh....#e#............#e#..",
+".....#ijd#...kbgla....cg.......#h.....gc..",
+"....kje#......mlj....kn........cj......nk.",
+"...kle.........nc....bh........jc......hb.",
+"..#jl#.........bg...#l#.......alh......#l#",
+"..cld..........b#...hn........hla.......nh",
+".kll...........a....cc.....kbbjlbbd.....cc",
+".ilc................ef........jc........fe",
+".nlh................jh.......alh........hj",
+".llk................lg.......hla........gl",
+".ll#..........i.....lg.......bj.........gl",
+".nla.........mh.....lh.......li.........hl",
+".dlh.........c......jd......klg..kk.....dn",
+"..nn.......#c#......bi......hl#..i......ib",
+"..anea....hi#.......fb......gl..hm......bf",
+"....deebcim.........ml.......cifm.......lm",
+".....................jk................kj.",
+".....................fi................id.",
+".....................#j#..............#j..",
+"......................gc..............cg..",
+".......................fg............gf...",
+"........................fk..........kf...."};
+</xpm>
+</TexFormula>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph7	1	1	31/12/10 02:00
+geometry	445	0	537	460	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	519	397
+PlotTitle	Title	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	0	0	0	0	
+AxesTitles	%(?X)	%(?Y)			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+AxesTitleDistance	-1	-1	-1	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F1</Title>
+<Expression>5+2*x+0.5*x^2+0.01*x^3</Expression>
+<Variable>x</Variable>
+<Range>-50	20</Range>
+<Points>400</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+curve	Draw2_1	Draw2_2	1	0	#000000	0	1	7	10	#0000ff	#000000	0	#000000	14	1	2	0	0	29	1
+scale	0	-100	400	0	6	5	0	0
+scale	1	-100	400	0	8	5	0	0
+scale	2	-60	30	0	8	5	0	0
+scale	3	-60	30	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<line>	0.984555984555989	266.935483870968	0.984555984555989	266.935483870968	1	#000000	SolidLine	0	0	4	45	1	1</line>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph8	1	1	24/01/11 12:01
+geometry	409	118	537	460	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	519	397
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	 	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Draw3_1	Draw3_2	1	0	#ff0000	0	1	7	1	#000000	#ff0000	0	#000000	14	1	2	0	0	29	1
+scale	0	0	1.2	0	8	5	0	0
+scale	1	0	1.2	0	7	5	0	0
+scale	2	0	12	0	7	5	0	0
+scale	3	0	12	0	7	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	0
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.12269938650307</x>
+<y>1.1895043731778</y>
+<right>4.09815950920245</right>
+<bottom>1.09154518950437</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1) scalino discreto
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<table>
+Draw4	30	2	27/01/11 17:31
+geometry	537	0	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	3.05489260143200e-02	-3.34448160535100e-03
+1	7.39856801909300e-02	9.96655518394600e-02
+2	1.17422434367500e-01	1.04347826087000e-01
+3	1.87589498806700e-01	2.12040133779300e-01
+4	2.84486873508400e-01	1.74581939799300e-01
+5	3.01193317422400e-01	3.89966555183900e-01
+6	3.64677804295900e-01	3.47826086956500e-01
+7	5.18377088305500e-01	5.44481605351200e-01
+8	6.48687350835300e-01	5.63210702341100e-01
+</data>
+</table>
+<multiLayer>
+Graph9	1	1	27/01/11 17:31
+geometry	0	0	567	475	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	549	412
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles					
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Draw5_1	Draw5_2	1	0	#000000	0	1	7	1	#000000	#ff0000	0	#000000	14	1	2	0	0	29	1
+curve	Draw6_1	Draw6_2	1	0	#000000	0	1	7	1	#000000	#00ff00	0	#000000	14	1	2	0	0	29	1
+scale	0	-2	14	0	8	5	0	0
+scale	1	-2	14	0	8	5	0	0
+scale	2	-2	14	0	9	5	0	0
+scale	3	-2	14	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.90160183066362</x>
+<y>13.411371237458</y>
+<right>2.32036613272311</right>
+<bottom>11.0033444816054</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1) r=0
+\l(2) r=1
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>1</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<table>
+Draw5	30	2	27/01/11 17:32
+geometry	853	163	445	220	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	0.00000000000000e+00	0.00000000000000e+00
+1	1.00000000000000e+00	1.00000000000000e+00
+2	2.00000000000000e+00	2.00000000000000e+00
+3	3.00000000000000e+00	3.00000000000000e+00
+4	4.00000000000000e+00	4.00000000000000e+00
+5	5.00000000000000e+00	5.00000000000000e+00
+6	6.00000000000000e+00	6.00000000000000e+00
+7	7.00000000000000e+00	7.00000000000000e+00
+8	8.00000000000000e+00	8.00000000000000e+00
+9	9.00000000000000e+00	9.00000000000000e+00
+10	1.00000000000000e+01	1.00000000000000e+01
+11	1.10000000000000e+01	1.10000000000000e+01
+12	1.20000000000000e+01	1.20000000000000e+01
+</data>
+</table>
+<table>
+Draw6	30	2	27/01/11 17:33
+geometry	0	0	1920	658	hidden
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	6.05491990846700e+00	4.79598662207400e+00
+1	6.09153318077800e+00	3.45819397993300e+00
+2	6.05491990846700e+00	7.25752508361200e+00
+3	6.09153318077800e+00	9.02341137123700e+00
+4	6.86041189931400e+00	8.16722408026800e+00
+5	7.77574370709400e+00	7.04347826087000e+00
+6	8.36155606407300e+00	5.70568561872900e+00
+7	7.66590389016000e+00	4.95652173913000e+00
+8	7.00686498855800e+00	4.10033444816100e+00
+9	6.89702517162500e+00	5.91973244147200e+00
+10	7.44622425629300e+00	5.91973244147200e+00
+11	6.89702517162500e+00	7.57859531772600e+00
+12	5.57894736842100e+00	7.68561872909700e+00
+13	4.22425629290600e+00	6.77591973244100e+00
+14	5.10297482837500e+00	6.29431438127100e+00
+15	4.48054919908500e+00	5.59866220735800e+00
+16	5.39588100686500e+00	3.67224080267600e+00
+17	5.61556064073200e+00	4.58193979933100e+00
+18	5.06636155606400e+00	7.95317725752500e+00
+19	3.45537757437100e+00	6.18729096990000e+00
+20	4.18764302059500e+00	5.81270903010000e+00
+21	4.44393592677300e+00	4.74247491638800e+00
+22	4.88329519450800e+00	3.72575250836100e+00
+23	6.53089244851300e+00	6.40133779264200e+00
+24	6.60411899313500e+00	4.36789297658900e+00
+25	7.99542334096100e+00	4.52842809364500e+00
+26	5.76201372997700e+00	8.54180602006700e+00
+27	6.56750572082400e+00	3.77926421404700e+00
+</data>
+</table>
+<multiLayer>
+Graph10	1	1	27/01/11 17:43
+geometry	0	0	537	460	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	519	397
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	 	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F1</Title>
+<Expression>x</Expression>
+<Variable>x</Variable>
+<Range>0	10</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>F2</Title>
+<Expression>x+cos(x)</Expression>
+<Variable>x</Variable>
+<Range>0	10</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#00ff00</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	10	0	8	5	0	0
+scale	1	0	10	0	8	5	0	0
+scale	2	0	10	0	8	5	0	0
+scale	3	0	10	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>1.0429447852761</x>
+<y>8.8921282798834</y>
+<right>2.45398773006135</right>
+<bottom>7.5801749271137</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+\l(1) gaussiano
+\l(2) generale
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>-0.081799591002045</x>
+<y>10.320699708455</y>
+<right>1.10429447852761</right>
+<bottom>9.50437317784256</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+E[X|Y]
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>9.4478527607362</x>
+<y>0.058309037900875</y>
+<right>10.0613496932515</right>
+<bottom>-0.75801749271137</bottom>
+<attachTo>0</attachTo>
+<onTop>1</onTop>
+<Text>
+y
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<multiLayer>
+Graph11	1	1	27/01/11 17:54
+geometry	0	0	537	460	hidden
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	519	397
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	 	 			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Sans	12	75	0	0	0
+ScaleFont0	Sans	10	75	0	0	0
+ScaleFont1	Sans	10	75	0	0	0
+ScaleFont2	Sans	10	75	0	0	0
+ScaleFont3	Sans	10	75	0	0	0
+AxisFont0	Sans	10	50	0	0	0
+AxisFont1	Sans	10	50	0	0	0
+AxisFont2	Sans	10	50	0	0	0
+AxisFont3	Sans	10	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+<Function>
+<Type>0</Type>
+<Title>F1</Title>
+<Expression>exp(-x)</Expression>
+<Variable>x</Variable>
+<Range>0	5</Range>
+<Points>100</Points>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0	1.2	0	8	5	0	0
+scale	1	0	1.2	0	8	5	0	0
+scale	2	0	5	0	8	5	0	0
+scale	3	0	5	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	0	1	0	1
+</graph>
+<LinkXAxes>0</LinkXAxes>
+</multiLayer>
+<open>1</open>
