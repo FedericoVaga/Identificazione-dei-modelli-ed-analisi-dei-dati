@@ -1,0 +1,217 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8113,        208]
+NotebookOptionsPosition[      7829,        194]
+NotebookOutlinePosition[      8213,        210]
+CellTagsIndexPosition[      8170,        207]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"figure1", "=", 
+   RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", "1", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotPoints", "\[Rule]", "5"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Filling", "\[Rule]", "Axis"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "Red", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", "\[Theta]", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"RegionFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}], ",", 
+        RowBox[{"1", "<", "x", "<", "4"}]}], "]"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Ticks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", " ", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "a", ",", 
+            RowBox[{"{", 
+             RowBox[{"0.3", ",", "0"}], "}"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"4", ",", "b", ",", 
+            RowBox[{"{", 
+             RowBox[{"0.3", ",", "0"}], "}"}]}], "}"}]}], " ", "}"}], ",", 
+        RowBox[{"{", "none", "}"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"figure2", "=", 
+   RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Evaluate", "@", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"PDF", "[", 
+          RowBox[{
+           RowBox[{"NormalDistribution", "[", 
+            RowBox[{"0", ",", "\[Sigma]"}], "]"}], ",", 
+           RowBox[{"x", "-", "1"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\[Sigma]", ",", 
+           RowBox[{"{", 
+            RowBox[{".75", ",", "1", ",", "2"}], "}"}]}], "}"}]}], "]"}]}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "6"}], ",", "6"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotPoints", "\[Rule]", "5"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Filling", "\[Rule]", "Axis"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", "\[Theta]", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Ticks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", " ", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", 
+           OverscriptBox["\[Theta]", "_"], ",", 
+           RowBox[{"{", 
+            RowBox[{".6", ",", "0"}], "}"}]}], "}"}], " ", "}"}], ",", 
+        RowBox[{"{", "none", "}"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"figure3", "=", 
+   RowBox[{"ListPlot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Table", "[", 
+       RowBox[{"k", ",", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", "1", ",", "2"}], "}"}]}], "]"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "Yellow", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Filling", "\[Rule]", "Axis"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", "\[Theta]", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Ticks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", " ", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", 
+           OverscriptBox["\[Theta]", "_"], ",", 
+           RowBox[{"{", 
+            RowBox[{".5", ",", "0"}], "}"}]}], "}"}], " ", "}"}], ",", 
+        RowBox[{"{", "none", "}"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"figure4", "=", 
+   RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"-", "x"}], "]"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotPoints", "\[Rule]", "5"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Filling", "\[Rule]", "Axis"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "Brown", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", "\[Theta]", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Ticks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", " ", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", 
+           RowBox[{"{", 
+            RowBox[{".1", ",", "0"}], "}"}]}], "}"}], " ", "}"}], ",", 
+        RowBox[{"{", "none", "}"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\</home/federico/workspace/books/imadls/mathematica/prior1.eps\>\"", 
+    ",", "figure1", ",", "\"\<EPS\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\</home/federico/workspace/books/imadls/mathematica/prior2.eps\>\"", 
+    ",", "figure2", ",", "\"\<EPS\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\</home/federico/workspace/books/imadls/mathematica/prior3.eps\>\"", 
+    ",", "figure3", ",", "\"\<EPS\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\</home/federico/workspace/books/imadls/mathematica/prior4.eps\>\"", 
+    ",", "figure4", ",", "\"\<EPS\>\""}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.5126429841307707`*^9, 3.5126430973347187`*^9}, {
+   3.5126431740105867`*^9, 3.512643223540731*^9}, {3.512643266631612*^9, 
+   3.5126433144651937`*^9}, 3.5126433513433313`*^9, {3.512643416801236*^9, 
+   3.512643501399967*^9}, 3.512643538701902*^9, {3.5126435744963207`*^9, 
+   3.512643646645318*^9}, {3.5126437895997353`*^9, 3.512643809167921*^9}, {
+   3.5126438436505547`*^9, 3.512643851258871*^9}, {3.5126438875194683`*^9, 
+   3.512644012453405*^9}, {3.512644077010961*^9, 3.5126440784156637`*^9}, {
+   3.512644116971143*^9, 3.512644124054496*^9}, 3.512644156001959*^9, {
+   3.512644194112543*^9, 3.5126442125202217`*^9}, {3.512644325609631*^9, 
+   3.51264432645011*^9}, {3.512644369750342*^9, 3.5126443858015203`*^9}, {
+   3.5126444554265614`*^9, 3.512644560192624*^9}, {3.51264459305812*^9, 
+   3.512644741208427*^9}}]
+},
+WindowSize->{740, 867},
+WindowMargins->{{Automatic, 161}, {Automatic, 53}},
+TaggingRules->{"GraphicsSelectionType" -> {}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 7268, 172, 970, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

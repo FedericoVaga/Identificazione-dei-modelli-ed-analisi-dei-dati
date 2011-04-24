@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2016,         66]
+NotebookOptionsPosition[      1781,         53]
+NotebookOutlinePosition[      2117,         68]
+CellTagsIndexPosition[      2074,         65]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<PlotLegends`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"figure", "=", 
+   RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "*", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "x"}], ")"}], "^", "2"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotPoints", "\[Rule]", "5"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "Red", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\[Theta]", ",", "L"}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\</home/federico/workspace/books/imadls/mathematica/verosimiglianza2.\
+eps\>\"", ",", "figure", ",", "\"\<EPS\>\""}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.512642780711986*^9, 3.512642827532607*^9}}]
+},
+WindowSize->{740, 867},
+WindowMargins->{{Automatic, 69}, {Automatic, 74}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1220, 31, 240, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,27 +1,43 @@
 \section{Stima a posteriori} 
 % ######################################################################## Introduzione
 \subsection{Introduzione}
-\index{Stima a posteriori}Al contrario di ciò che avviene per la stima ML, nella stima a posteriori descriviamo il parametro $\theta$ come una V.C. (Teorema di Bayes). Questo criterio di stima si basa sulle conoscenze a priori che si hanno sull'esperimento, ovvero tutte quelle conoscenze che già abbiamo circa l'esperimento osservato. In figura \ref{fig:apriori} vediamo alcuni esempi di conoscenze a priori:
+\index{Stima a posteriori}Al contrario di ciò che avviene per la stima ML, nella stima a posteriori descriviamo il parametro $\theta$ come una V.C. (Teorema di Bayes). Questo criterio di stima si basa sulle conoscenze a priori che si hanno sull'esperimento, ovvero tutte quelle conoscenze che già abbiamo circa l'esperimento osservato. In figura \ref{fig:apriori1} e \ref{fig:apriori2} vediamo alcuni esempi di conoscenze a priori:
 
-  \begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=0.3]{img/spost.png}
-    \caption{esempi di conoscenze a priori\label{fig:apriori}}
-  \end{figure}
+\begin{figure}[!p]
+  \centering
+        \subfigure
+        [sappiamo che $\theta$ assume un valore nell'intervallo $a,b$ senza nessuna preferenza\label{fig:thetaAB}]
+        {\includegraphics[keepaspectratio]{mathematica/prior1}}
+  
+        \subfigure
+        [sappiamo che $\theta$ tende, in media, ad assumere il valore $\bar{\theta}$ (con più o meno incertezza)\label{fig:thetagauss}]
+        {\includegraphics[keepaspectratio]{mathematica/prior2}}
+        \caption{esempi di conoscenze a priori.\label{fig:apriori1}}
+\end{figure}
+\begin{figure}[p]
+  \centering  
+        \subfigure
+        [sappiamo che $\theta=\bar{\theta}$\label{fig:thetaexact}]
+        {\includegraphics[keepaspectratio]{mathematica/prior3}}
+  
+        \subfigure
+        [sappiamo che $\theta \geq 0$ ma che i valori alti sono via via meno probabili\label{fig:thetaexp}]
+        {\includegraphics[keepaspectratio]{mathematica/prior4}}
+  
+  \caption{esempi di conoscenze a priori.\label{fig:apriori2}}
+\end{figure}
 
-\begin{enumerate}
-  \item sappiamo che $\theta$ assume un valore nell'intervallo $[a,b]$ senza nessuna preferenza
-  \item sappiamo che $\theta$ tende, in media, ad assumere il valore $\bar{\theta}$ (con più o meno incertezza)
-  \item sappiamo che $\theta=\bar{\theta}$
-  \item sappiamo che $\theta \geq 0$ ma che i valori alti sono via via meno probabili
-\end{enumerate}
-
-Modifichiamo ora il nostro diagramma del problema di stima di modo che sia presente anche questa conoscenza a priori:
-
-%FIXME da fare il diagramma nuovo
-\begin{center}\textbf{[diagramma nuovo, farlo bello]}\end{center}
-
-Il nuovo elemento introdotto $\Sigma_1$ è la sorgente casuale caratterizzata dalla ddp della conoscenza a priori $f_\Theta(\theta)$; in questo modo $\Sigma$ sarà caratterizzata da una ddp che subisce una dipendenza $f_{X|\Theta}(X|\Theta=0)$. L'idea alla base della stima a posteriori è che se conosciamo $f_{\Theta}(\theta)$ e $f_{X|\Theta}(X|\Theta=0)$, possiamo calcolare la ddp a posteriori  condizionata dal vettore delle osservazioni $X$, mediante il teorema di Bayes\index{Teorema di Bayes}:
+Modifichiamo ora il nostro diagramma del problema di stima di modo che sia presente anche questa conoscenza a priori. Come si vede in figura \ref{fig:diagrammastima2} il nuovo elemento introdotto $\Sigma_1$ è la sorgente casuale caratterizzata dalla ddp della conoscenza a priori $f_\Theta(\theta)$; in questo modo $\Sigma$ sarà caratterizzata da una ddp che subisce una dipendenza $f_{X|\Theta}(X|\Theta=0)$.
+\begin{figure}[h]
+  \centering
+  \[
+    \begin{CD}
+     \framebox{$\theta^0$} @>>> \framebox{$\Sigma_1, f_\Theta(\theta^0)$} @>>>  \framebox{$\Sigma, f_{X|\Theta}(X|\Theta=0)$} @>X>> \framebox{$g(X)$} @>>> \framebox{$\hat{\theta}$}
+    \end{CD}
+  \]
+  \caption{Diagramma di stima\label{fig:diagrammastima2}}
+\end{figure}
+L'idea alla base della stima a posteriori è che se conosciamo $f_{\Theta}(\theta)$ e $f_{X|\Theta}(X|\Theta=0)$, possiamo calcolare la ddp a posteriori  condizionata dal vettore delle osservazioni $X$, mediante il teorema di Bayes\index{Teorema di Bayes}:
 
   \[ f_{\Theta|X}(\theta|X)=\frac{f_{X|\Theta}(X|\theta) \cdot f_\Theta(\theta)}{\int_{D_\theta}^{} f_{X|\Theta}(X|\theta) \cdot f_\Theta(\theta) d\theta } \]
   
