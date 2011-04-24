@@ -24,14 +24,16 @@ ne consegue il seguente teorema.
 \paragraph{Teorema} dividendo per $\sigma^2$ la somma dei quadrati dei residui\index{Somma dei quadrati dei residui, Sum of Square Residual (SSR)} -SSR- della stima LS, si ottiene una V.C. di tipo $\chi^2$ con $N-q$ gradi di libertà:
   \[ J=\frac{\varepsilon^T\varepsilon}{\sigma^2}\sim \chi^2(N-q) \]
 
-%FIXME
+
+L'idea è di usare il $\chi_{N-1}^2$ come riferimento sulla bontà di un modello e di verificare dove cade l'SSR rispetto al livello di significatività che vogliamo. 
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[keepaspectratio]{mathematica/chiquadrotest}
-  \caption{\textbf{[FIXME: il grafico è circa questo ma mancano i segni]}test del Chi Quadro\label{fig:chiquadrotest}}
+  \caption{test del Chi Quadro \label{fig:chiquadrotest}}
 \end{figure}
 
-L'idea è di usare il $\chi_{N-1}^2$ come riferimento sulla bontà di un modello e di verificare dove cade l'SSR rispetto al livello di significatività che vogliamo. Possiamo quindi dire che scartiamo un modello se:
+Osservando la figura \ref{fig:chiquadrotest}, diciamo che scartiamo un modello se:
 
     \[ J>x_\alpha \]
 
