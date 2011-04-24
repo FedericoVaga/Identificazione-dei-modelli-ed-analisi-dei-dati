@@ -23,14 +23,12 @@ Ipotizziamo di aver "azzeccato" il modello vero, e che valga l'ipostesi che:
 ne consegue il seguente teorema.
 \paragraph{Teorema} dividendo per $\sigma^2$ la somma dei quadrati dei residui\index{Somma dei quadrati dei residui, Sum of Square Residual (SSR)} -SSR- della stima LS, si ottiene una V.C. di tipo $\chi^2$ con $N-q$ gradi di libertà:
   \[ J=\frac{\varepsilon^T\varepsilon}{\sigma^2}\sim \chi^2(N-q) \]
+
 %FIXME
-
-
-
 \begin{figure}[htbp]
   \centering
   \includegraphics[keepaspectratio]{mathematica/chiquadrotest}
-  \caption{\textbf{[FIXME]}test del Chi Quadro\label{fig:chiquadrotest}}
+  \caption{\textbf{[FIXME: il grafico è circa questo ma mancano i segni]}test del Chi Quadro\label{fig:chiquadrotest}}
 \end{figure}
 
 L'idea è di usare il $\chi_{N-1}^2$ come riferimento sulla bontà di un modello e di verificare dove cade l'SSR rispetto al livello di significatività che vogliamo. Possiamo quindi dire che scartiamo un modello se:
@@ -54,11 +52,14 @@ Supponiamo sempre di avere a che fare con modelli del tipo:
 
     \[ Y=\Phi\cdot\theta^0+V,  \quad  V\sim N(0,\sigma^2\cdot I) \]
 
-Spesso non è evidente quale sia il modello migliore e vorremmo poter scegliere quello "ottimo". Prendiamo in considerazione i modelli matrioska\index{Modelli Matrioska}, ovvero sequenze di classi di modelli in cui per ogni classe sono comprese le precedenti come casi particolari. Un esempio di modelli matrioska sono i polinomi:
-%FIXME
-\begin{center}
-\textbf{[grafico]}
-\end{center}
+Spesso non è evidente quale sia il modello migliore e vorremmo poter scegliere quello "ottimo". Prendiamo in considerazione i modelli matrioska\index{Modelli Matrioska}, ovvero sequenze di classi di modelli in cui per ogni classe sono comprese le precedenti come casi particolari. I polinomi, rappresentati in figura \ref{fig:matrioska}, sono un esempio di modelli matrioska.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[keepaspectratio]{mathematica/matrioska}
+  \caption{Plinomi: esempi di modelli matrioska\label{fig:matrioska}}
+\end{figure}
+
 In questo caso vediamo una rappresentazione tipica del problema: quale scelgo come modello? Come primo istinto si potrebbe pensare di usare il modello che minimizza l'SSR, ma sappiamo già che al crescere dell'ordine del modello l'SSR decresce e quindi l'SSR minimo è sempre in corrispondenza del modello di ordine maggiore e quindi più complesso. Ad esempio, per un campione di $N=100$ il modello migliore è approssimato da un polinomio di ordine $99$! Ovviamente non vi è alcun problema nell'usare polinomi di ordine elevato, con un altrettanto elevato numero di parametri, ma nella realtà i dati sono soggetti a rumore e quindi un polinomio di grado elevato viene influenzato dagli errori e quindi il modello seguirà troppo fedelmente l'andamento dei dati sperimentali e quindi dei suoi errori.\newline
 Per evitare modelli complessi e sbagliati usiamo il principio di parsimonia, ovvero, usiamo la classe di ordine minore fintanto che la classe di ordine maggiore non ha un SSR molto minore. Perché il principio sia completo occorre indicare cosa s'intende per molto minore; usiamo come indica di riduzione percentuale dell'SSR:
 
