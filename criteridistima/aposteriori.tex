@@ -210,14 +210,11 @@ quindi possiamo anche scrivere:
   
 Confrontando quest'ultima formulazione della stima MAP notiamo che assomiglia molto alla stima ML, infatti, senza conoscenza a priori sarebbe la formula della verosimiglianza, ma anche nel caso in cui la conoscenza a priori sia uniforme, ovvero $f_\Theta$ è costante.\newline
 Come per la stima ML, anche per la stima MAP poterebbe essere più conveniente massimizzare il supporto, inoltre, tutte le tecniche di calcolo numerico adottate per la stima ML sono ancora valide per la stima MAP (di cui la stima ML è un caso particolare).
-Come abbiamo visto, la stima MAP usa la moda come parametro di riferimento, ma con alcuni tipi di distribuzione la moda è poco significativa, ad esempio quando la ddp a posteriori è di tipo esponenziale, si avrebbe $\theta^{MAP}=0$ quando, invece, è ben evidente dalla figura \ref{fig:expMAP} che c'è il 100\% di probabilità che ciò non sia vero, ma che $\theta^{MAP}>0$
+Come abbiamo visto, la stima MAP usa la moda come parametro di riferimento, ma con alcuni tipi di distribuzione la moda è poco significativa, ad esempio quando la ddp a posteriori è di tipo esponenziale come in figura \ref{fig:expMAP}, si avrebbe $\theta^{MAP}=0$ quando, invece, è ben evidente che c'è il 100\% di probabilità che ciò non sia vero, ma che $\theta^{MAP}>0$
 
-\begin{center}
-\textbf{[FIXME: disegnare la moda sul grafico e scrivere un commento decente]}
-\end{center}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[scale=0.5]{img/exp.png}
+  \includegraphics[scale=1]{mathematica/esponenziale}
   \caption{esponenziale\label{fig:expMAP}}
 \end{figure}
 

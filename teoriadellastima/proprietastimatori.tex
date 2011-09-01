@@ -11,7 +11,7 @@ La polarizzazione \index{Polarizzazione} indica lo scostamento della stima $\hat
 
   \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.6]{img/polarizzazione.png}
+    \includegraphics[scale=1]{mathematica/polarizzazione}
     \caption{esempio di polarizzazione\label{fig:espolarizzazione}}
   \end{figure}
 
@@ -28,7 +28,7 @@ La consistenza \index{Consistenza} è una proprietà molto desiderabile in quant
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[scale=0.5]{img/G2D.png}
+  \includegraphics[scale=1]{mathematica/consistenza}
   \caption{esempio consistenza\label{fig:esconsistenza}}
 \end{figure}
 
@@ -41,7 +41,7 @@ Con la disuguaglianza di Cramer-Rao \index{Limite Cramer Rao} - CR - si definisc
 
     \[ Var[\hat{\theta}]\geq - \left( E\left[\frac{\partial^2}{\partial\theta^2} ln f_X^\theta(X)\mid_{\theta=\theta^0}\right] \right)^{-1} = S^{-1} \]
 
-Per uno stimatore non polarizzato la varianza è sinonimo di precisione, quinidi, una varianza minore significa maggiore precisione e quindi è da preferire. Da questa disuguaglianza ne consegue che non è possibile ottenere uno stimatore con una varianza inferiore al limite di CR. Il limite CR esiste perché, dopotutto, dai dati sperimentali non si può ricavare più di tanto e un margine di incertezza rimane sempre: il risultato ideale a varianza nulla è impossibile da ricavare puntualmente.\newline
+Per uno stimatore non polarizzato la varianza è sinonimo di precisione, quinidi, una varianza minore significa maggiore precisione e quindi è da preferire. Da questa disuguaglianza ne consegue che non è possibile ottenere uno stimatore con una varianza inferiore al limite di CR. Il limite CR esiste perché, dopotutto, dai dati sperimentali non si può ricavare più di tanto e un marg    ine di incertezza rimane sempre: il risultato ideale a varianza nulla è impossibile da ricavare puntualmente.\newline
 La quantità utilizzata per definire il limite CR è detta \textit{quantità di informazione di Fisher} \index{Quantità di informazione di Fisher}:
 
     \[ S:= -  E\left[\frac{\partial^2}{\partial \theta^2} ln f_X^\theta(X)\mid_{\theta=\theta^0}\right] \]
@@ -61,7 +61,7 @@ Generalmente, come già accennato, è preferibile uno stimatore non polarizzato,
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[scale=0.5]{img/npfm.png}
+  \includegraphics[scale=1]{mathematica/polarizzazione2}
   \caption{Confronto fra stimatore polarizzato consistente e uno non polarizzato e non consistente\label{fig:confrontopolarizzazioneconsistenza}}
 \end{figure}
 
@@ -70,11 +70,16 @@ Abbiamo appena dimostrato che uno stimatore polarizzato potrebbe essere preferib
 
     \[ E[(\hat{\theta}-\theta^0)^2] \approxeq 0\]
 
-Il motivo per cui si valuta l'errore quadratico e non l'errore, è che valutando l'errore è facile ottenere $E[\hat{\theta}-\theta^0]=0$ mediante compensazione fra errori positivi ed errori negativi, mentre con l'errore quadratico ciò non capita.\newline
-%FIXME
-    \begin{center}
-    \textbf{[FIXME i famosi conti che non capisco]}
-    \end{center}
+Il motivo per cui si valuta l'errore quadratico e non l'errore, è che valutando l'errore è facile ottenere $E[\hat{\theta}-\theta^0]=0$ mediante compensazione fra errori positivi ed errori negativi, mentre con l'errore quadratico ciò non capita.
+
+    \[
+        \begin{split}
+            E[(\hat{\theta}-\theta^0)^2]&=E[(\hat{\theta}-E[\hat{\theta}])+(E[\hat{\theta}]-\theta^0)^2]=\\
+            &=Var[\hat{\theta}]+2E[(\hat{\theta}-E[\hat{\theta}])](E[\hat{\theta}]-\theta^0)+(E[\hat{\theta}]-\theta^0)^2=\\
+            &=Var[\hat{\theta}]+(E[\hat{\theta}]-\theta^0)^2
+        \end{split}
+    \]
+    
 Dalla formula appena illustrata, possiamo concludere che lo stimatore polarizzato è accettabile se si guadagna abbastanza in varianza o, viceversa, preferire la non polarizzazione perdendo in varianza. Uno stimatore non polarizzato $\hat{\theta}^m$ si dice a minima varianza \index{minima varianza} se:
 
     \[ Var[\hat{\theta}^m]\leq Var[\hat{\theta}],\quad\forall \hat{\theta} \]
